@@ -121,8 +121,9 @@ class Order(models.Model):  # 订单
 
 class Order_detail(models.Model):  # 订单详情
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    commodity_id = models.IntegerField('商品id')
-    unit_price = models.FloatField('商品单价', null=False, blank=False, default=0)  # 商品单价
+    commodity = models.ForeignKey(Commodity, on_delete=models.CASCADE)
+    # commodity_id = models.IntegerField('商品ID', null=False, blank=False, default=0)
+    unit_price = models.FloatField('商品单价', null=True, blank=True, default=0)  # 商品单价
     quantity = models.IntegerField('商品数量', null=False, blank=False, default=0)  # 商品数量
 
     class Meta:
@@ -131,6 +132,7 @@ class Order_detail(models.Model):  # 订单详情
         verbose_name_plural = '订单明细'
 
     def save(self, *args, **kwargs):
+        self.unit_price = self.commodity.selling_price
         super(Order_detail, self).save(*args, **kwargs)
         self.order.total_amount += self.unit_price*self.quantity
         self.order.real_payment += self.unit_price*self.quantity

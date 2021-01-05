@@ -48,7 +48,7 @@ class GlobalSettings(object):
 
 class CommodityAdmin(object):
     list_filter = ['sales', 'stock', 'production_date', 'shelf_life']
-    list_display = ('id', 'name', 'upload_img', 'purchase_price', 'selling_price', 'sales')
+    list_display = ('id', 'name', 'upload_img', 'purchase_price', 'selling_price', 'sales', 'stock')
     list_display_links = ['name']
     # list_display_link = ('name')
     # redirect = True

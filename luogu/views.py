@@ -143,10 +143,15 @@ def shopping_cart(request):
             product_id = product["commodity_id"]
             num = int(product["num"])
             commodity = Commodity.objects.get(id=product_id)
-            order_detail = Order_detail(order=order, commodity_id=product_id, unit_price=commodity.selling_price,
-                                        quantity=num)
+            order_detail = Order_detail(order=order, commodity=commodity, quantity=num)
             order_detail.save()
             total_amount += commodity.selling_price * num
+
+            # 清空购物车
+            shopping_cart_detail = Shopping_cart_details.objects.filter(commodity=commodity, customer=customer)[0]
+            shopping_cart_detail.quantity = 0
+            shopping_cart_detail.save()
+
         # order.total_amount = total_amount
         # order.real_payment = total_amount
         order.save()
@@ -257,7 +262,8 @@ def order_settlement(request, order_id):
         details = []
         num = 0
         for detail in order_details:
-            commodity = Commodity.objects.get(id=detail.commodity_id)
+            commodity = detail.commodity
+            # commodity = Commodity.objects.get(id=detail.commodity_id)
             details.append({
                 "img": commodity.img,
                 "name": commodity.name,
@@ -343,7 +349,8 @@ def order_details(request, order_id):
     order_details = Order_detail.objects.filter(order=order)
     num = 0
     for order_detail in order_details:
-        commodity = Commodity.objects.get(id=order_detail.commodity_id)
+        commodity = order_detail.commodity
+        # commodity = Commodity.objects.get(id=order_detail.commodity_id)
         products.append({
             "img": commodity.img,
             "name": commodity.name,
@@ -388,7 +395,8 @@ def order_management(request):
     for order in ls:
         try:
             one_of_order_detail = Order_detail.objects.filter(order=order)[0]
-            product = Commodity.objects.get(id=one_of_order_detail.commodity_id)
+            product = one_of_order_detail.commodity
+            # product = Commodity.objects.get(id=one_of_order_detail.commodity_id)
 
             orders.append({
                 "order_id": order.id,
@@ -474,8 +482,7 @@ def product_details(request, product_id):
             print(order.id)
             order.save()
             print(order.id)
-            order_detail = Order_detail(order=order, commodity_id=product_id, unit_price=commodity.selling_price,
-                                        quantity=num)
+            order_detail = Order_detail(order=order, commodity=commodity, quantity=num)
             print(order_detail.id)
             order_detail.save()
             print(order_detail.id)
@@ -620,7 +627,8 @@ def successful_payment(request, order_id):
     order.save()
     order_details = Order_detail.objects.filter(order=order)
     for order_detail in order_details:
-        commodity = Commodity.objects.get(id=order_detail.commodity_id)
+        commodity = order_detail.commodity
+        # commodity = Commodity.objects.get(id=order_detail.commodity_id)
         commodity.stock -= order_detail.quantity
         commodity.sales += order_detail.quantity
         commodity.save()
