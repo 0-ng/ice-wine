@@ -1,0 +1,2067 @@
+﻿{% extends "base_nav.html" %}
+{% load staticfiles %}
+
+{% block upjs %}
+    <title>购物车</title>
+    <link href="{% static 'luogu/files/购物车/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <script src="{% static 'luogu/files/购物车/data.js' %}"></script>
+    <link href="{% static 'luogu/files/index/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <script src="{% static 'luogu/files/index/data.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+
+    {#    <body>#}
+    <div id="base" class="">
+
+
+        <!-- Rpt_Cart (Repeater) -->
+        {#        <form action="/购物车.html" method="post">#}
+        {#        {% csrf_token %}#}
+        <div id="u9995" class="ax_default" data-label="Rpt_Cart">
+            <script id="u9995_script" type="axure-repeater-template" data-label="Rpt_Cart">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u9996" class="ax_default box1__eee u9996">
+                    <div id="u9996_div" class="u9996_div"></div>
+                    <div id="u9996_text" class="text u9996_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Choice_Cart (Dynamic Panel) -->
+                <div id="u9997" class="" data-label="Choice_Cart">
+                    <div id="u9997_state0" class="panel_state u9997_state0" data-label="State1" style="">
+                        <div id="u9997_state0_content" class="panel_state_content u9997_state0_content">
+
+                            <!-- Box_Choice_Cart (Rectangle) -->
+                            <div id="u9998" class="ax_default box1__eee u9998" data-label="Box_Choice_Cart">
+                                <div id="u9998_div" class="u9998_div"></div>
+                                <div id="u9998_text" class="text u9998_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icocon_Choice_Cart (Image) -->
+                            <div id="u9999" class="ax_default _图片_ u9999" data-label="Icocon_Choice_Cart">
+                                <img id="" class="img u9999_img"
+                                     src="{% static 'luogu/images/地址管理/icon_choice_whole_u5534.svg' %}"/>
+                                <div id="u9999_text" class="text u9999_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u10000" class="ax_default box_2 u10000">
+                    <div id="u10000_div" class="u10000_div"></div>
+                    <div id="u10000_text" class="text u10000_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Image) -->
+                <div id="u10001" class="ax_default _图片_ u10001">
+                    <img id="u10001_img" class="img u10001_img" src="{% static 'luogu/images/index/u38.png' %}"/>
+                    <div id="u10001_text" class="text u10001_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) -->
+                <div id="u10002" class="ax_default u10002" data-left="184" data-top="24" data-width="260"
+                     data-height="62">
+
+                    <!-- Name_Cart (Rectangle) -->
+                    <div id="u10003" class="ax_default label_14px__red u10003" data-label="Name_Cart">
+                        <div id="u10003_div" class="u10003_div"></div>
+                        <div id="u10003_text" class="text u10003_text">
+                            <p><span>商品名称</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Name (Rectangle) -->
+                    <div id="u10004" class="ax_default label_14px__red u10004" data-label="Name">
+                        <div id="u10004_div" class="u10004_div"></div>
+                        <div id="u10004_text" class="text u10004_text">
+                            <p><span>颜色：红色&nbsp;&nbsp; 尺码：S</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) -->
+                <div id="u10005" class="ax_default u10005" data-left="527" data-top="40" data-width="53"
+                     data-height="30">
+
+                    <!-- Price_Cart (Rectangle) -->
+                    <div id="u10006" class="ax_default label_14px__red u10006" data-label="Price_Cart">
+                        <div id="u10006_div" class="u10006_div"></div>
+                        <div id="u10006_text" class="text u10006_text">
+                            <p><span>单价</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Price_Cart (Rectangle) -->
+                    <div id="u10007" class="ax_default label_14px__red u10007" data-label="Price_Cart">
+                        <div id="u10007_div" class="u10007_div"></div>
+                        <div id="u10007_text" class="text u10007_text">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) -->
+                <div id="u10008" class="ax_default u10008" data-left="917" data-top="40" data-width="53"
+                     data-height="30">
+
+                    <!-- Money_Cart (Rectangle) -->
+                    <div id="u10009" class="ax_default label_14px__red u10009" data-label="Money_Cart">
+                        <div id="u10009_div" class="u10009_div"></div>
+                        <div id="u10009_text" class="text u10009_text">
+                            <p><span>0.00</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Price_Cart (Rectangle) -->
+                    <div id="u10010" class="ax_default label_14px__red u10010" data-label="Price_Cart">
+                        <div id="u10010_div" class="u10010_div"></div>
+                        <div id="u10010_text" class="text u10010_text">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Number_Dt_Cart (Dynamic Panel) -->
+                <div id="u10011" class="ax_default u10011" data-label="Number_Dt_Cart">
+                    <div id="u10011_state0" class="panel_state u10011_state0" data-label="State1" style="">
+                        <div id="u10011_state0_content" class="panel_state_content u10011_state0_content">
+
+                            <!-- Reduce_Cart (Rectangle) -->
+                            <div id="u10012" class="ax_default box1__eee u10012" data-label="Reduce_Cart">
+                                <div id="u10012_div" class="u10012_div"></div>
+                                <div id="u10012_text" class="text u10012_text">
+                                    <p><span>-</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Increase_Cart (Rectangle) -->
+                            <div id="u10013" class="ax_default box1__eee u10013" data-label="Increase_Cart">
+                                <div id="u10013_div" class="u10013_div"></div>
+                                <div id="u10013_text" class="text u10013_text">
+                                    <p><span>+</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Unnamed (Rectangle) -->
+                            <div id="u10014" class="ax_default box1__eee u10014">
+                                <div id="u10014_div" class="u10014_div"></div>
+                                <div id="u10014_text" class="text u10014_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Number_Cart (Text Field) -->
+                            <div id="u10015" class="ax_default text_field u10015" data-label="Number_Cart">
+                                <div id="u10015_div" class="u10015_div"></div>
+                                <input id="u10015_input" type="text" value="1" class="u10015_input"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price_Cart (Rectangle) -->
+                <div id="u10016" class="ax_default label_14px__red u10016" data-label="Price_Cart">
+                    <div id="u10016_div" class="u10016_div"></div>
+                    <div id="u10016_text" class="text u10016_text">
+                        <p><span>移入收藏夹</span></p>
+                    </div>
+                </div>
+
+                <!-- Price_Cart (Rectangle) -->
+                <div id="u10017" class="ax_default label_14px__red u10017" data-label="Price_Cart">
+                    <div id="u10017_div" class="u10017_div"></div>
+                    <div id="u10017_text" class="text u10017_text">
+                        <p><span>删除</span></p>
+                    </div>
+                </div>
+            </script>
+            {% for product in products %}
+                <div id="" class="preeval u1" style="top:{{ product.top }}px;width: 1200px; height: 140px;">
+                    <div id="" class="ax_default box1__eee u9996"
+                         style="width: 1200px; height: 140px; left: 0px; top: 0px;visibility: inherit">
+                        <div id="" class="u9996_div" style="width: 1200px; height: 140px;visibility: inherit"></div>
+                        <div id="" class="text u9996_text" style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div id="" class="ax_default u9997" data-label="Choice_Cart" style="visibility: inherit">
+                        <div id="" class="panel_state u9997_state0" data-label="State1"
+                             style=" width: 20px; height: 20px;visibility: inherit">
+                            <div id="" class="panel_state_content u9997_state0_content" style="visibility: inherit">
+                                <input type="checkbox" value="{{ product.commodity_id }}" name="check_box_list">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="" class="ax_default _图片_ u10001"
+                         style="width: 56px; height: 45px; left: 70px; top: 23px;visibility: inherit">
+                        <img id="" class="img u10001_img" src="/media/{{ product.img }}"/>
+                        <div id="" class="text u10001_text" style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div id="" class="ax_default u10002" style="visibility: inherit" data-left="184" data-top="24"
+                         data-width="260" data-height="62">
+
+                        <div id="" class="ax_default label_14px__red u10003" data-label="Name_Cart"
+                             style="width: 260px; height: 30px; left: 184px; top: 24px;visibility: inherit">
+                            <div id="" class="u10003_div" style="width: 260px; height: 30px;visibility: inherit"></div>
+                            <div id="" class="text u10003_text" style="visibility: inherit">
+                                <p><span>{{ product.name }}</span></p>
+                            </div>
+                        </div>
+
+                        <div id="" class="ax_default label_14px__red u10004" data-label="Name"
+                             style="width: 260px; height: 30px; left: 184px; top: 56px;visibility: inherit">
+                            <div id="" class="u10004_div" style="width: 260px; height: 30px;visibility: inherit"></div>
+                            <div id="" class="text u10004_text" style="visibility: inherit">
+                                <p><span>规格：{{ product.standard }}ml</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="" class="ax_default u10005" style="visibility: inherit" data-left="527" data-top="40"
+                         data-width="53" data-height="30">
+
+                        <div id="" class="ax_default label_14px__red u10006" data-label="Price_Cart"
+                             style="width: 36px; height: 30px; left: 544px; top: 40px;visibility: inherit">
+                            <div id="" class="u10006_div" style="width: 36px; height: 30px;visibility: inherit"></div>
+                            <div id="" class="text u10006_text" style="visibility: inherit">
+                                <p><span>{{ product.selling_price }}</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Price_Cart (Rectangle) -->
+                        <div id="" class="ax_default label_14px__red u10007" data-label="Price_Cart"
+                             style="width: 14px; height: 30px; left: 527px; top: 40px;visibility: inherit">
+                            <div id="" class="u10007_div" style="width: 14px; height: 30px;visibility: inherit"></div>
+                            <div id="" class="text u10007_text" style="visibility: inherit">
+                                <p><span>￥</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Group) -->
+                    <div id="" class="ax_default u10008" style="visibility: inherit" data-left="917" data-top="40"
+                         data-width="53" data-height="30">
+
+                        <!-- Money_Cart (Rectangle) -->
+                        <div id="" class="ax_default label_14px__red u10009" data-label="Money_Cart"
+                             style="width: 36px; height: 30px; left: 934px; top: 40px;visibility: inherit">
+                            <div id="" class="u10009_div" style="width: 36px; height: 30px;visibility: inherit"></div>
+                            <div id="" class="text u10009_text" style="visibility: inherit">
+                                <p><span
+                                        price={{ product.selling_price }} name={{ product.commodity_id }}>{% widthratio product.quantity 1 product.selling_price %}</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Price_Cart (Rectangle) -->
+                        <div id="" class="ax_default label_14px__red u10010" data-label="Price_Cart"
+                             style="width: 14px; height: 30px; left: 917px; top: 40px;visibility: inherit">
+                            <div id="" class="u10010_div" style="width: 14px; height: 30px;visibility: inherit"></div>
+                            <div id="" class="text u10010_text" style="visibility: inherit">
+                                <p><span>￥</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Number_Dt_Cart (Dynamic Panel) -->
+                    <div id="" class="ax_default u10011" data-label="Number_Dt_Cart" style="visibility: inherit">
+                        <div id="" class="panel_state u10011_state0" data-label="State1"
+                             style=" width: 114px; height: 31px;visibility: inherit">
+                            <div id="" class="panel_state_content u10011_state0_content" style="visibility: inherit">
+
+                                <!-- Reduce_Cart (Rectangle) -->
+                                <div id="" name="{{ product.commodity_id }}" class="sub ax_default box1__eee u10012"
+                                     data-label="Reduce_Cart"
+                                     style="cursor: pointer; width: 30px; height: 28px; left: 0px; top: 0px;visibility: inherit">
+                                    <div id="" class="u10012_div"
+                                         style="width: 30px; height: 28px;visibility: inherit"></div>
+                                    <div id="" class="text u10012_text" style="visibility: inherit">
+                                        <p><span>-</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Increase_Cart (Rectangle) -->
+                                <div id="" name="{{ product.commodity_id }}" class="add ax_default box1__eee u10013"
+                                     data-label="Increase_Cart"
+                                     style="cursor: pointer; width: 30px; height: 28px; left: 84px; top: 0px;visibility: inherit">
+                                    <div id="" class="u10013_div"
+                                         style="width: 30px; height: 28px;visibility: inherit"></div>
+                                    <div id="" class="text u10013_text" style="visibility: inherit">
+                                        <p><span>+</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Unnamed (Rectangle) -->
+                                <div id="" class="ax_default box1__eee u10014"
+                                     style="width: 56px; height: 28px; left: 29px; top: 0px;visibility: inherit">
+                                    <div id="" class="u10014_div"
+                                         style="width: 56px; height: 28px;visibility: inherit"></div>
+                                    <div id="" class="text u10014_text" style="display:none; visibility: hidden">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <!-- Number_Cart (Text Field) -->
+                                <div id="" class="ax_default text_field u10015" data-label="Number_Cart"
+                                     style="width: 36px; height: 20px; left: 39px; top: 4px;visibility: inherit">
+                                    <div id="" class="u10015_div"
+                                         style="width: 36px; height: 20px;visibility: inherit"></div>
+                                    <input id="" type="text"
+                                           name={{ product.commodity_id }} value="{{ product.quantity }}"
+                                           class="u10015_input commodity_quantity"
+                                           oninput="value=value.replace(/[^\d]/g,'')"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price_Cart (Rectangle) -->
+                    <div id="" class="ax_default label_14px__red u10016" data-label="Price_Cart"
+                         style="width: 80px; height: 30px; left: 1083px; top: 24px;visibility: inherit">
+                        <div id="" class="u10016_div" style="width: 80px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u10016_text" style="visibility: inherit">
+                            <p><span>移入收藏夹</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Price_Cart (Rectangle) -->
+                    <div id="" name="{{ product.commodity_id }}"
+                         class="ax_default label_14px__red u10017 delete_product" data-label="Price_Cart"
+                         style="cursor: pointer; width: 32px; height: 30px; left: 1083px; top: 56px;visibility: inherit">
+                        <div id="" class="u10017_div" style="width: 32px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u10017_text" style="visibility: inherit">
+                            <p><span>删除</span></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        {#        <!-- xiadan (Dynamic Panel) -->#}
+        <div id="u10029" style="top:{{ down_top1 }}px" class="ax_default" data-label="xiadan">
+            <div id="u10029_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10029_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10030" class="ax_default box_2">
+                        <div id="u10030_div" class=""></div>
+                        <div id="u10030_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10031" class="ax_default label_14px__red">
+                        <div id="u10031_div" class=""></div>
+                        <div id="u10031_text" class="text ">
+                            <p>
+                                <span>商品合计：￥</span>
+                                <span id="total_account">0.00</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10032" class="ax_default label_14px__red">
+                        <div id="u10032_div" class=""></div>
+                        <div id="u10032_text" class="text ">
+                            <p><span>活动优惠：-￥0.00</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10033" class="ax_default label_14px__red">
+                        <div id="u10033_div" class=""></div>
+                        <div id="u10033_text" class="text ">
+                            <p style="font-size:14px;"><span
+                                    style="font-family:'微软雅黑', sans-serif;font-weight:400;color:#999999;">应付总金额：</span><span
+                                    style="font-family:'微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑', sans-serif;font-weight:700;font-size:16px;color:#F52F3E;">￥</span><span
+                                    style="font-family:'微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑', sans-serif;font-weight:700;font-size:22px;color:#F52F3E;"
+                                    id="real_pay">0.00</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom_Choice_Cart (Dynamic Panel) -->
+                    {#                    <div id="u10034" class="ax_default" data-label="Bottom_Choice_Cart">#}
+                    {#                        <div id="u10034_state0" class="panel_state" data-label="State1" style="">#}
+                    {#                            <div id="u10034_state0_content" class="panel_state_content">#}
+                    {##}
+                    {#                                <!-- Box_Choice_Whole (Rectangle) -->#}
+                    {#                                <div id="u10035" class="ax_default box1__eee" data-label="Box_Choice_Whole">#}
+                    {#                                    <div id="u10035_div" class=""></div>#}
+                    {#                                    <div id="u10035_text" class="text " style="display:none; visibility: hidden">#}
+                    {#                                        <p></p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {##}
+                    {#                                <!-- Icon_Choice_Whole (Image) -->#}
+                    {#                                <div id="u10036" class="ax_default _图片_" data-label="Icon_Choice_Whole">#}
+                    {#                                    <img id="u10036_img" class="img "#}
+                    {#                                         src="{% static 'luogu/images/地址管理/icon_choice_whole_u5534.svg' %}"/>#}
+                    {#                                    <div id="u10036_text" class="text " style="display:none; visibility: hidden">#}
+                    {#                                        <p></p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {##}
+                    {#                                <!-- Unnamed (Rectangle) -->#}
+                    {#                                <div id="u10037" class="ax_default label_14px__red">#}
+                    {#                                    <div id="u10037_div" class=""></div>#}
+                    {#                                    <div id="u10037_text" class="text ">#}
+                    {#                                        <p><span>全选</span></p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+
+                    <!-- Unnamed (Rectangle) -->
+                    {#                    <div id="u10038" class="ax_default label_14px__red">#}
+                    {#                        <div id="u10038_div" class=""></div>#}
+                    {#                        <div id="u10038_text" class="text ">#}
+                    {#                            <p><span>删除选中商品</span></p>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10039" style="display: none"></div>
+                    <button id="xiadan" style="cursor:pointer;" class="ax_default box1__eee">
+                        <div id="u10039_div" class=""></div>
+                        <div id="u10039_text" class="text ">
+                            <p><span>下单</span></p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {#        </form>#}
+        {#        <!-- Unnamed (Table) -->#}
+        <div id="u10018" class="ax_default">
+
+            {#            <!-- Unnamed (Table Cell) -->#}
+            <div id="u10019" class="ax_default table_cell">
+                <img id="u10019_img" class="img " src="{% static 'luogu/images/退货申请—1选择退货商品/u9291.png' %}"/>
+                <div id="u10019_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                </div>
+            </div>
+
+            {#            <!-- Unnamed (Table Cell) -->#}
+            <div id="u10020" class="ax_default table_cell">
+                <img id="u10020_img" class="img " src="{% static 'luogu/images/购物车/u10020.png' %}"/>
+                <div id="u10020_text" class="text ">
+                    <p><span>商品信息</span></p>
+                </div>
+            </div>
+
+            {#            <!-- Unnamed (Table Cell) -->#}
+            <div id="u10021" class="ax_default table_cell">
+                <img id="u10021_img" class="img " src="{% static 'luogu/images/购物车/u10021.png' %}"/>
+                <div id="u10021_text" class="text ">
+                    <p><span>单价</span></p>
+                </div>
+            </div>
+
+            {#            <!-- Unnamed (Table Cell) -->#}
+            <div id="u10022" class="ax_default table_cell">
+                <img id="u10022_img" class="img " src="{% static 'luogu/images/购物车/u10022.png' %}"/>
+                <div id="u10022_text" class="text ">
+                    <p><span>数量</span></p>
+                </div>
+            </div>
+
+            {#            <!-- Unnamed (Table Cell) -->#}
+            <div id="u10023" class="ax_default table_cell">
+                <img id="u10023_img" class="img " src="{% static 'luogu/images/购物车/u10021.png' %}"/>
+                <div id="u10023_text" class="text ">
+                    <p><span>小计</span></p>
+                </div>
+            </div>
+
+            {#            <!-- Unnamed (Table Cell) -->#}
+            <div id="u10024" class="ax_default table_cell">
+                <img id="u10024_img" class="img " src="{% static 'luogu/images/购物车/u10024.png' %}"/>
+                <div id="u10024_text" class="text ">
+                    <p><span>操作&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+                </div>
+            </div>
+        </div>
+
+        {#        <!-- Top_Choice_Cart (Dynamic Panel) -->#}
+        <div id="u10025" class="ax_default" data-label="Top_Choice_Cart">
+            <div id="u10025_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10025_state0_content" class="panel_state_content">
+
+                    {#                    <!-- Box_Choice_Whole (Rectangle) -->#}
+                    <div id="u10026" class="ax_default box1__eee" data-label="Box_Choice_Whole">
+                        <div id="u10026_div" class=""></div>
+                        <div id="u10026_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    {#                    <!-- Icon_Choice_Whole (Image) -->#}
+                    <div id="u10027" class="ax_default _图片_" val=0 data-label="Icon_Choice_Whole">
+                        <img id="u10027_img" class="img "
+                             src="{% static 'luogu/images/地址管理/icon_choice_whole_u5534_selected.png' %}"/>
+                        <div id="u10027_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    {#                    <!-- Unnamed (Rectangle) -->#}
+                    <div id="u10028" class="ax_default label_14px__red">
+                        <div id="u10028_div" class=""></div>
+                        <div id="u10028_text" class="text ">
+                            <p><span>全选</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#        <!-- Bottom (Dynamic Panel) -->#}
+        <div id="u10040" style="top:{{ down_top3 }}px" class="ax_default" data-label="Bottom">
+            <div id="u10040_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10040_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (网站底部) -->
+
+                    <!-- Unnamed (Dynamic Panel) -->
+                    <div id="u10042" class="ax_default">
+                        <div id="u10042_state0" class="panel_state" data-label="State1" style="">
+                            <div id="u10042_state0_content" class="panel_state_content">
+
+                                <!-- Unnamed (Group) -->
+                                <div id="u10043" class="ax_default" data-left="75" data-top="50" data-width="200"
+                                     data-height="152">
+
+                                    <!-- Unnamed (Rectangle) -->
+                                    <div id="u10044" class="ax_default label_14px__red">
+                                        <div id="u10044_div" class=""></div>
+                                        <div id="u10044_text" class="text ">
+                                            <p><span>客户服务</span></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Unnamed (Group) -->
+                                    <div id="u10045" class="ax_default" data-left="75" data-top="102" data-width="200"
+                                         data-height="100">
+
+                                        <!-- Unnamed (Dynamic Panel) -->
+                                        <div id="u10046" class="ax_default">
+                                            <div id="u10046_state0" class="panel_state" data-label="State1" style="">
+                                                <div id="u10046_state0_content" class="panel_state_content">
+
+                                                    <!-- Unnamed (Rectangle) -->
+                                                    <div id="u10047" class="ax_default box1__eee">
+                                                        <div id="u10047_div" class=""></div>
+                                                        <div id="u10047_text" class="text "
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Unnamed (Rectangle) -->
+                                                    <div id="u10048" class="ax_default label_14px__red">
+                                                        <div id="u10048_div" class=""></div>
+                                                        <div id="u10048_text" class="text ">
+                                                            <p><span>在线客服</span></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Unnamed (Image) -->
+                                                    <div id="u10049" class="ax_default _图片_">
+                                                        <img id="u10049_img" class="img "
+                                                             src="{% static 'luogu/images/index/u609.png' %}"/>
+                                                        <div id="u10049_text" class="text "
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Unnamed (Dynamic Panel) -->
+                                        <div id="u10050" class="ax_default">
+                                            <div id="u10050_state0" class="panel_state" data-label="State1" style="">
+                                                <div id="u10050_state0_content" class="panel_state_content">
+
+                                                    <!-- Unnamed (Rectangle) -->
+                                                    <div id="u10051" class="ax_default box1__eee">
+                                                        <div id="u10051_div" class=""></div>
+                                                        <div id="u10051_text" class="text "
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Unnamed (Rectangle) -->
+                                                    <div id="u10052" class="ax_default label_14px__red">
+                                                        <div id="u10052_div" class=""></div>
+                                                        <div id="u10052_text" class="text ">
+                                                            <p><span>用户反馈</span></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Unnamed (Image) -->
+                                                    <div id="u10053" class="ax_default _图片_">
+                                                        <img id="u10053_img" class="img "
+                                                             src="{% static 'luogu/images/index/u613.png' %}"/>
+                                                        <div id="u10053_text" class="text "
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Unnamed (Rectangle) -->
+                                <div id="u10054" class="ax_default label_14px__red">
+                                    <div id="u10054_div" class=""></div>
+                                    <div id="u10054_text" class="text ">
+                                        <p><span>产品原型公众号</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Unnamed (Rectangle) -->
+                                <div id="u10055" class="ax_default label_14px__red">
+                                    <div id="u10055_div" class=""></div>
+                                    <div id="u10055_text" class="text ">
+                                        <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">扫描二维码</span>
+                                        </p>
+                                        <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">关注卖冰酒小组</span>
+                                        </p>
+                                        <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;"></span>
+                                        </p>
+                                        <p><span
+                                                style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;"><br></span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Unnamed (Image) -->
+                                <div id="u10056" class="ax_default _图片_">
+                                    <img id="u10056_img" class="img " src="{% static 'luogu/images/index/u616.png' %}"/>
+                                    <div id="u10056_text" class="text " style="display:none; visibility: hidden">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Dynamic Panel) -->
+                    <div id="u10057" class="ax_default">
+                        <div id="u10057_state0" class="panel_state" data-label="State1" style="">
+                            <div id="u10057_state0_content" class="panel_state_content">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="u10041" style="display:none; visibility:hidden;"></div>
+                </div>
+            </div>
+        </div>
+
+        {#        <!-- Like (Dynamic Panel) -->#}
+        <div id="u10058" style="top: {{ down_top2 }}px" class="ax_default" data-label="Like">
+            <div id="u10058_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10058_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (Group) -->
+                    <div id="u10059" class="ax_default" data-left="0" data-top="0" data-width="1200" data-height="359">
+
+                        <!-- Unnamed (Rectangle) -->
+                        <div id="u10060" class="ax_default box_2">
+                            <div id="u10060_div" class=""></div>
+                            <div id="u10060_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <!-- Dt_Similar (Dynamic Panel) -->
+                        <div id="u10061" class="ax_default" data-label="Dt_Similar">
+                            <div id="u10061_state0" class="panel_state" data-label="1" style="">
+                                <div id="u10061_state0_content" class="panel_state_content">
+
+                                    <!-- 1_Rpt_Similar (Repeater) -->
+                                    <div id="u10062" class="ax_default" data-label="1_Rpt_Similar">
+                                        <script id="u10062_script" type="axure-repeater-template"
+                                                data-label="1_Rpt_Similar">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10063" class="ax_default u10063">
+                                                <div id="u10063_state0" class="panel_state u10063_state0"
+                                                     data-label="State1" style="">
+                                                    <div id="u10063_state0_content"
+                                                         class="panel_state_content u10063_state0_content">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10064" class="ax_default box_2 u10064">
+                                                            <div id="u10064_div" class="u10064_div"></div>
+                                                            <div id="u10064_text" class="text u10064_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10065" class="ax_default label_14px__red u10065"
+                                                             data-label="Name_Shop_Collection">
+                                                            <div id="u10065_div" class="u10065_div"></div>
+                                                            <div id="u10065_text" class="text u10065_text">
+                                                                <p><span>商品名称</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10067" class="ax_default u10067"
+                                                             data-label="Price_Dt">
+                                                            <div id="u10067_state0" class="panel_state u10067_state0"
+                                                                 data-label="State1" style="">
+                                                                <div id="u10067_state0_content"
+                                                                     class="panel_state_content u10067_state0_content">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10068"
+                                                                         class="ax_default label_14px__red u10068"
+                                                                         data-label="Price">
+                                                                        <div id="u10068_div" class="u10068_div"></div>
+                                                                        <div id="u10068_text" class="text u10068_text">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10066" style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10069" class="ax_default box_2 u10069">
+                                                            <img id="u10069_img" class="img u10069_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10069_text" class="text u10069_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10071" class="ax_default u10071" data-label="Img_Dt">
+                                                            <div id="u10071_state0" class="panel_state u10071_state0"
+                                                                 data-label="State1" style="">
+                                                                <div id="u10071_state0_content"
+                                                                     class="panel_state_content u10071_state0_content">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10072" class="ax_default _图片_ u10072">
+                                                                        <img id="u10072_img" class="img u10072_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10072_text" class="text u10072_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10070" style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Image) -->
+                                                        <div id="u10073"
+                                                             class="ax_default _图片_ ax_default_hidden u10073"
+                                                             style="display:none; visibility: hidden">
+                                                            <img id="u10073_img" class="img u10073_img"
+                                                                 src="{% static 'luogu/images/购物车/u10073.png' %}"/>
+                                                            <div id="u10073_text" class="text u10073_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </script>
+                                        {% for product in ret_same_products %}
+                                            <a href="/商品详情页.html/{{ product.id }}">
+                                                <div id="u10062-1" class="preeval"
+                                                     style="left: {{ product.left }}px; width: 192px; height: 280px;">
+
+                                                    <!-- Unnamed (Dynamic Panel) -->
+                                                    <div id="u10063-1" class="ax_default u10063"
+                                                         style="visibility: inherit">
+                                                        <div id="u10063-1_state0" class="panel_state u10063_state0"
+                                                             data-label="State1"
+                                                             style=" width: 192px; height: 280px;visibility: inherit">
+                                                            <div id="u10063-1_state0_content"
+                                                                 class="panel_state_content u10063_state0_content"
+                                                                 style="visibility: inherit">
+
+                                                                <!-- Unnamed (Rectangle) -->
+                                                                <div id="u10064-1" class="ax_default box_2 u10064"
+                                                                     style="width: 192px; height: 280px; left: 0px; top: 0px;visibility: inherit">
+                                                                    <div id="u10064-1_div" class="u10064_div"
+                                                                         style="width: 192px; height: 280px;visibility: inherit"></div>
+                                                                    <div id="u10064-1_text" class="text u10064_text"
+                                                                         style="display:none; visibility: hidden">
+                                                                        <p></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Name_Shop_Collection (Rectangle) -->
+                                                                <div id="u10065-1"
+                                                                     class="ax_default label_14px__red u10065"
+                                                                     data-label="Name_Shop_Collection"
+                                                                     style="width: 192px; height: 30px; left: 0px; top: 203px;visibility: inherit">
+                                                                    <div id="u10065-1_div" class="u10065_div"
+                                                                         style="width: 192px; height: 30px;visibility: inherit"></div>
+                                                                    <div id="u10065-1_text" class="text u10065_text"
+                                                                         style="visibility: inherit">
+                                                                        <p><span>{{ product.name }}</span></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Unnamed (价格) -->
+
+                                                                <!-- Price_Dt (Dynamic Panel) -->
+                                                                <div id="u10067-1" class="ax_default u10067"
+                                                                     data-label="Price_Dt" style="visibility: inherit">
+                                                                    <div id="u10067-1_state0"
+                                                                         class="panel_state u10067_state0"
+                                                                         data-label="State1"
+                                                                         style=" width: 150px; height: 30px;visibility: inherit">
+                                                                        <div id="u10067-1_state0_content"
+                                                                             class="panel_state_content u10067_state0_content"
+                                                                             style="visibility: inherit">
+
+                                                                            <!-- Price (Rectangle) -->
+                                                                            <div id="u10068-1"
+                                                                                 class="ax_default label_14px__red u10068"
+                                                                                 data-label="Price"
+                                                                                 style="width: 150px; height: 30px; left: 0px; top: 0px;visibility: inherit">
+                                                                                <div id="u10068-1_div"
+                                                                                     class="u10068_div"
+                                                                                     style="width: 150px; height: 30px;visibility: inherit"></div>
+                                                                                <div id="u10068-1_text"
+                                                                                     class="text u10068_text"
+                                                                                     style="visibility: inherit">
+                                                                                    <p>
+                                                                                        <span>{{ product.selling_price }}</span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="u10066-1"
+                                                                     style="display:none; visibility:hidden;"></div>
+
+                                                                <!-- Unnamed (Rectangle) -->
+                                                                <div id="u10069-1" class="ax_default box_2 u10069"
+                                                                     style="width: 192px; height: 192px; left: 0px; top: 0px;visibility: inherit">
+                                                                    <img id="u10069-1_img" class="img u10069_img"
+                                                                         src="/media/{{ product.img }}"/>
+                                                                    <div id="u10069-1_text" class="text u10069_text"
+                                                                         style="display:none; visibility: hidden">
+                                                                        <p></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Unnamed (IMG-白) -->
+
+                                                                <!-- Img_Dt (Dynamic Panel) -->
+                                                                <div id="u10071-1" class="ax_default u10071"
+                                                                     data-label="Img_Dt"
+                                                                     style="visibility: inherit">
+                                                                    <div id="u10071-1_state0"
+                                                                         class="panel_state u10071_state0"
+                                                                         data-label="State1"
+                                                                         style=" width: 120px; height: 120px;visibility: inherit">
+                                                                        <div id="u10071-1_state0_content"
+                                                                             class="panel_state_content u10071_state0_content"
+                                                                             style="visibility: inherit">
+
+                                                                            <!-- Unnamed (Image) -->
+                                                                            <div id="u10072-1"
+                                                                                 class="ax_default _图片_ u10072"
+                                                                                 style="width: 80px; height: 64px; left: 20px; top: 28px;visibility: inherit">
+                                                                                {#                                                                        <img id="u10072-1_img" class="img u10072_img"#}
+                                                                                {#                                                                             src="/media/{{ product.img }}"/>#}
+                                                                                <div id="u10072-1_text"
+                                                                                     class="text u10072_text"
+                                                                                     style="display:none; visibility: hidden">
+                                                                                    <p></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="u10070-1"
+                                                                     style="display:none; visibility:hidden;"></div>
+
+                                                                <!-- Unnamed (Image) -->
+                                                                <div id="u10073-1" class="ax_default _图片_ u10073"
+                                                                     style="width: 80px; height: 80px; left: 244px; top: 62px;display:none; visibility: hidden">
+                                                                    {#                                                            <img id="u10073-1_img" class="img u10073_img"#}
+                                                                    {#                                                                 src="/media/{{ product.img }}"/>#}
+                                                                    <div id="u10073-1_text" class="text u10073_text"
+                                                                         style="display:none; visibility: hidden">
+                                                                        <p></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="u10061_state1" class="panel_state" data-label="2" style="visibility: hidden;">
+                                <div id="u10061_state1_content" class="panel_state_content">
+
+                                    <!-- 2_Rpt_Similar (Repeater) -->
+                                    <div id="u10074" class="ax_default" data-label="2_Rpt_Similar">
+                                        <script id="u10074_script" type="axure-repeater-template"
+                                                data-label="2_Rpt_Similar">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10075" class="ax_default u10075">
+                                                <div id="u10075_state0" class="panel_state u10075_state0"
+                                                     data-label="State1" style="">
+                                                    <div id="u10075_state0_content"
+                                                         class="panel_state_content u10075_state0_content">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10076" class="ax_default box_2 u10076">
+                                                            <div id="u10076_div" class="u10076_div"></div>
+                                                            <div id="u10076_text" class="text u10076_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10077" class="ax_default label_14px__red u10077"
+                                                             data-label="Name_Shop_Collection">
+                                                            <div id="u10077_div" class="u10077_div"></div>
+                                                            <div id="u10077_text" class="text u10077_text">
+                                                                <p><span>商品名称</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10079" class="ax_default u10079"
+                                                             data-label="Price_Dt">
+                                                            <div id="u10079_state0" class="panel_state u10079_state0"
+                                                                 data-label="State1" style="">
+                                                                <div id="u10079_state0_content"
+                                                                     class="panel_state_content u10079_state0_content">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10080"
+                                                                         class="ax_default label_14px__red u10080"
+                                                                         data-label="Price">
+                                                                        <div id="u10080_div" class="u10080_div"></div>
+                                                                        <div id="u10080_text" class="text u10080_text">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10078" style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10081" class="ax_default box_2 u10081">
+                                                            <img id="u10081_img" class="img u10081_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10081_text" class="text u10081_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10083" class="ax_default u10083" data-label="Img_Dt">
+                                                            <div id="u10083_state0" class="panel_state u10083_state0"
+                                                                 data-label="State1" style="">
+                                                                <div id="u10083_state0_content"
+                                                                     class="panel_state_content u10083_state0_content">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10084" class="ax_default _图片_ u10084">
+                                                                        <img id="u10084_img" class="img u10084_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10084_text" class="text u10084_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10082" style="display:none; visibility:hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </script>
+                                        <div id="u10074-1" class="preeval" style="width: 192px; height: 280px;">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10075-1" class="ax_default u10075" style="visibility: inherit">
+                                                <div id="u10075-1_state0" class="panel_state u10075_state0"
+                                                     data-label="State1"
+                                                     style=" width: 192px; height: 280px;visibility: inherit">
+                                                    <div id="u10075-1_state0_content"
+                                                         class="panel_state_content u10075_state0_content"
+                                                         style="visibility: inherit">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10076-1" class="ax_default box_2 u10076"
+                                                             style="width: 192px; height: 280px; left: 0px; top: 0px;visibility: inherit">
+                                                            <div id="u10076-1_div" class="u10076_div"
+                                                                 style="width: 192px; height: 280px;visibility: inherit"></div>
+                                                            <div id="u10076-1_text" class="text u10076_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10077-1" class="ax_default label_14px__red u10077"
+                                                             data-label="Name_Shop_Collection"
+                                                             style="width: 192px; height: 30px; left: 0px; top: 203px;visibility: inherit">
+                                                            <div id="u10077-1_div" class="u10077_div"
+                                                                 style="width: 192px; height: 30px;visibility: inherit"></div>
+                                                            <div id="u10077-1_text" class="text u10077_text"
+                                                                 style="visibility: inherit">
+                                                                <p><span>风袅桃溪 马克杯</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10079-1" class="ax_default u10079"
+                                                             data-label="Price_Dt" style="visibility: inherit">
+                                                            <div id="u10079-1_state0" class="panel_state u10079_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 150px; height: 30px;visibility: inherit">
+                                                                <div id="u10079-1_state0_content"
+                                                                     class="panel_state_content u10079_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10080-1"
+                                                                         class="ax_default label_14px__red u10080"
+                                                                         data-label="Price"
+                                                                         style="width: 150px; height: 30px; left: 0px; top: 0px;visibility: inherit">
+                                                                        <div id="u10080-1_div" class="u10080_div"
+                                                                             style="width: 150px; height: 30px;visibility: inherit"></div>
+                                                                        <div id="u10080-1_text" class="text u10080_text"
+                                                                             style="visibility: inherit">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10078-1"
+                                                             style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10081-1" class="ax_default box_2 u10081"
+                                                             style="width: 192px; height: 192px; left: 0px; top: 0px;visibility: inherit">
+                                                            <img id="u10081-1_img" class="img u10081_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10081-1_text" class="text u10081_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10083-1" class="ax_default u10083" data-label="Img_Dt"
+                                                             style="visibility: inherit">
+                                                            <div id="u10083-1_state0" class="panel_state u10083_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 120px; height: 120px;visibility: inherit">
+                                                                <div id="u10083-1_state0_content"
+                                                                     class="panel_state_content u10083_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10084-1" class="ax_default _图片_ u10084"
+                                                                         style="width: 80px; height: 64px; left: 20px; top: 28px;visibility: inherit">
+                                                                        <img id="u10084-1_img" class="img u10084_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10084-1_text" class="text u10084_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10082-1"
+                                                             style="display:none; visibility:hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="u10074-2" class="preeval" style="width: 192px; height: 280px;">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10075-2" class="ax_default u10075" style="visibility: inherit">
+                                                <div id="u10075-2_state0" class="panel_state u10075_state0"
+                                                     data-label="State1"
+                                                     style=" width: 192px; height: 280px;visibility: inherit">
+                                                    <div id="u10075-2_state0_content"
+                                                         class="panel_state_content u10075_state0_content"
+                                                         style="visibility: inherit">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10076-2" class="ax_default box_2 u10076"
+                                                             style="width: 192px; height: 280px; left: 0px; top: 0px;visibility: inherit">
+                                                            <div id="u10076-2_div" class="u10076_div"
+                                                                 style="width: 192px; height: 280px;visibility: inherit"></div>
+                                                            <div id="u10076-2_text" class="text u10076_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10077-2" class="ax_default label_14px__red u10077"
+                                                             data-label="Name_Shop_Collection"
+                                                             style="width: 192px; height: 30px; left: 0px; top: 203px;visibility: inherit">
+                                                            <div id="u10077-2_div" class="u10077_div"
+                                                                 style="width: 192px; height: 30px;visibility: inherit"></div>
+                                                            <div id="u10077-2_text" class="text u10077_text"
+                                                                 style="visibility: inherit">
+                                                                <p><span>美浓烧幽玄系列千岁绿</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10079-2" class="ax_default u10079"
+                                                             data-label="Price_Dt" style="visibility: inherit">
+                                                            <div id="u10079-2_state0" class="panel_state u10079_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 150px; height: 30px;visibility: inherit">
+                                                                <div id="u10079-2_state0_content"
+                                                                     class="panel_state_content u10079_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10080-2"
+                                                                         class="ax_default label_14px__red u10080"
+                                                                         data-label="Price"
+                                                                         style="width: 150px; height: 30px; left: 0px; top: 0px;visibility: inherit">
+                                                                        <div id="u10080-2_div" class="u10080_div"
+                                                                             style="width: 150px; height: 30px;visibility: inherit"></div>
+                                                                        <div id="u10080-2_text" class="text u10080_text"
+                                                                             style="visibility: inherit">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10078-2"
+                                                             style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10081-2" class="ax_default box_2 u10081"
+                                                             style="width: 192px; height: 192px; left: 0px; top: 0px;visibility: inherit">
+                                                            <img id="u10081-2_img" class="img u10081_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10081-2_text" class="text u10081_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10083-2" class="ax_default u10083" data-label="Img_Dt"
+                                                             style="visibility: inherit">
+                                                            <div id="u10083-2_state0" class="panel_state u10083_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 120px; height: 120px;visibility: inherit">
+                                                                <div id="u10083-2_state0_content"
+                                                                     class="panel_state_content u10083_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10084-2" class="ax_default _图片_ u10084"
+                                                                         style="width: 80px; height: 64px; left: 20px; top: 28px;visibility: inherit">
+                                                                        <img id="u10084-2_img" class="img u10084_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10084-2_text" class="text u10084_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10082-2"
+                                                             style="display:none; visibility:hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="u10074-3" class="preeval" style="width: 192px; height: 280px;">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10075-3" class="ax_default u10075" style="visibility: inherit">
+                                                <div id="u10075-3_state0" class="panel_state u10075_state0"
+                                                     data-label="State1"
+                                                     style=" width: 192px; height: 280px;visibility: inherit">
+                                                    <div id="u10075-3_state0_content"
+                                                         class="panel_state_content u10075_state0_content"
+                                                         style="visibility: inherit">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10076-3" class="ax_default box_2 u10076"
+                                                             style="width: 192px; height: 280px; left: 0px; top: 0px;visibility: inherit">
+                                                            <div id="u10076-3_div" class="u10076_div"
+                                                                 style="width: 192px; height: 280px;visibility: inherit"></div>
+                                                            <div id="u10076-3_text" class="text u10076_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10077-3" class="ax_default label_14px__red u10077"
+                                                             data-label="Name_Shop_Collection"
+                                                             style="width: 192px; height: 30px; left: 0px; top: 203px;visibility: inherit">
+                                                            <div id="u10077-3_div" class="u10077_div"
+                                                                 style="width: 192px; height: 30px;visibility: inherit"></div>
+                                                            <div id="u10077-3_text" class="text u10077_text"
+                                                                 style="visibility: inherit">
+                                                                <p><span>钠钙玻璃高口杯</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10079-3" class="ax_default u10079"
+                                                             data-label="Price_Dt" style="visibility: inherit">
+                                                            <div id="u10079-3_state0" class="panel_state u10079_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 150px; height: 30px;visibility: inherit">
+                                                                <div id="u10079-3_state0_content"
+                                                                     class="panel_state_content u10079_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10080-3"
+                                                                         class="ax_default label_14px__red u10080"
+                                                                         data-label="Price"
+                                                                         style="width: 150px; height: 30px; left: 0px; top: 0px;visibility: inherit">
+                                                                        <div id="u10080-3_div" class="u10080_div"
+                                                                             style="width: 150px; height: 30px;visibility: inherit"></div>
+                                                                        <div id="u10080-3_text" class="text u10080_text"
+                                                                             style="visibility: inherit">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10078-3"
+                                                             style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10081-3" class="ax_default box_2 u10081"
+                                                             style="width: 192px; height: 192px; left: 0px; top: 0px;visibility: inherit">
+                                                            <img id="u10081-3_img" class="img u10081_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10081-3_text" class="text u10081_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10083-3" class="ax_default u10083" data-label="Img_Dt"
+                                                             style="visibility: inherit">
+                                                            <div id="u10083-3_state0" class="panel_state u10083_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 120px; height: 120px;visibility: inherit">
+                                                                <div id="u10083-3_state0_content"
+                                                                     class="panel_state_content u10083_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10084-3" class="ax_default _图片_ u10084"
+                                                                         style="width: 80px; height: 64px; left: 20px; top: 28px;visibility: inherit">
+                                                                        <img id="u10084-3_img" class="img u10084_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10084-3_text" class="text u10084_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10082-3"
+                                                             style="display:none; visibility:hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="u10074-4" class="preeval" style="width: 192px; height: 280px;">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10075-4" class="ax_default u10075" style="visibility: inherit">
+                                                <div id="u10075-4_state0" class="panel_state u10075_state0"
+                                                     data-label="State1"
+                                                     style=" width: 192px; height: 280px;visibility: inherit">
+                                                    <div id="u10075-4_state0_content"
+                                                         class="panel_state_content u10075_state0_content"
+                                                         style="visibility: inherit">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10076-4" class="ax_default box_2 u10076"
+                                                             style="width: 192px; height: 280px; left: 0px; top: 0px;visibility: inherit">
+                                                            <div id="u10076-4_div" class="u10076_div"
+                                                                 style="width: 192px; height: 280px;visibility: inherit"></div>
+                                                            <div id="u10076-4_text" class="text u10076_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10077-4" class="ax_default label_14px__red u10077"
+                                                             data-label="Name_Shop_Collection"
+                                                             style="width: 192px; height: 30px; left: 0px; top: 203px;visibility: inherit">
+                                                            <div id="u10077-4_div" class="u10077_div"
+                                                                 style="width: 192px; height: 30px;visibility: inherit"></div>
+                                                            <div id="u10077-4_text" class="text u10077_text"
+                                                                 style="visibility: inherit">
+                                                                <p><span>炫彩随行吸管杯</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10079-4" class="ax_default u10079"
+                                                             data-label="Price_Dt" style="visibility: inherit">
+                                                            <div id="u10079-4_state0" class="panel_state u10079_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 150px; height: 30px;visibility: inherit">
+                                                                <div id="u10079-4_state0_content"
+                                                                     class="panel_state_content u10079_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10080-4"
+                                                                         class="ax_default label_14px__red u10080"
+                                                                         data-label="Price"
+                                                                         style="width: 150px; height: 30px; left: 0px; top: 0px;visibility: inherit">
+                                                                        <div id="u10080-4_div" class="u10080_div"
+                                                                             style="width: 150px; height: 30px;visibility: inherit"></div>
+                                                                        <div id="u10080-4_text" class="text u10080_text"
+                                                                             style="visibility: inherit">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10078-4"
+                                                             style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10081-4" class="ax_default box_2 u10081"
+                                                             style="width: 192px; height: 192px; left: 0px; top: 0px;visibility: inherit">
+                                                            <img id="u10081-4_img" class="img u10081_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10081-4_text" class="text u10081_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10083-4" class="ax_default u10083" data-label="Img_Dt"
+                                                             style="visibility: inherit">
+                                                            <div id="u10083-4_state0" class="panel_state u10083_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 120px; height: 120px;visibility: inherit">
+                                                                <div id="u10083-4_state0_content"
+                                                                     class="panel_state_content u10083_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10084-4" class="ax_default _图片_ u10084"
+                                                                         style="width: 80px; height: 64px; left: 20px; top: 28px;visibility: inherit">
+                                                                        <img id="u10084-4_img" class="img u10084_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10084-4_text" class="text u10084_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10082-4"
+                                                             style="display:none; visibility:hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="u10074-5" class="preeval" style="width: 192px; height: 280px;">
+
+                                            <!-- Unnamed (Dynamic Panel) -->
+                                            <div id="u10075-5" class="ax_default u10075" style="visibility: inherit">
+                                                <div id="u10075-5_state0" class="panel_state u10075_state0"
+                                                     data-label="State1"
+                                                     style=" width: 192px; height: 280px;visibility: inherit">
+                                                    <div id="u10075-5_state0_content"
+                                                         class="panel_state_content u10075_state0_content"
+                                                         style="visibility: inherit">
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10076-5" class="ax_default box_2 u10076"
+                                                             style="width: 192px; height: 280px; left: 0px; top: 0px;visibility: inherit">
+                                                            <div id="u10076-5_div" class="u10076_div"
+                                                                 style="width: 192px; height: 280px;visibility: inherit"></div>
+                                                            <div id="u10076-5_text" class="text u10076_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Name_Shop_Collection (Rectangle) -->
+                                                        <div id="u10077-5" class="ax_default label_14px__red u10077"
+                                                             data-label="Name_Shop_Collection"
+                                                             style="width: 192px; height: 30px; left: 0px; top: 203px;visibility: inherit">
+                                                            <div id="u10077-5_div" class="u10077_div"
+                                                                 style="width: 192px; height: 30px;visibility: inherit"></div>
+                                                            <div id="u10077-5_text" class="text u10077_text"
+                                                                 style="visibility: inherit">
+                                                                <p><span>渐变玻璃低口杯 350ml</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (价格) -->
+
+                                                        <!-- Price_Dt (Dynamic Panel) -->
+                                                        <div id="u10079-5" class="ax_default u10079"
+                                                             data-label="Price_Dt" style="visibility: inherit">
+                                                            <div id="u10079-5_state0" class="panel_state u10079_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 150px; height: 30px;visibility: inherit">
+                                                                <div id="u10079-5_state0_content"
+                                                                     class="panel_state_content u10079_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Price (Rectangle) -->
+                                                                    <div id="u10080-5"
+                                                                         class="ax_default label_14px__red u10080"
+                                                                         data-label="Price"
+                                                                         style="width: 150px; height: 30px; left: 0px; top: 0px;visibility: inherit">
+                                                                        <div id="u10080-5_div" class="u10080_div"
+                                                                             style="width: 150px; height: 30px;visibility: inherit"></div>
+                                                                        <div id="u10080-5_text" class="text u10080_text"
+                                                                             style="visibility: inherit">
+                                                                            <p><span>商品价格</span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10078-5"
+                                                             style="display:none; visibility:hidden;"></div>
+
+                                                        <!-- Unnamed (Rectangle) -->
+                                                        <div id="u10081-5" class="ax_default box_2 u10081"
+                                                             style="width: 192px; height: 192px; left: 0px; top: 0px;visibility: inherit">
+                                                            <img id="u10081-5_img" class="img u10081_img"
+                                                                 src="{% static 'luogu/images/购物车/u10069.svg' %}"/>
+                                                            <div id="u10081-5_text" class="text u10081_text"
+                                                                 style="display:none; visibility: hidden">
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Unnamed (IMG-白) -->
+
+                                                        <!-- Img_Dt (Dynamic Panel) -->
+                                                        <div id="u10083-5" class="ax_default u10083" data-label="Img_Dt"
+                                                             style="visibility: inherit">
+                                                            <div id="u10083-5_state0" class="panel_state u10083_state0"
+                                                                 data-label="State1"
+                                                                 style=" width: 120px; height: 120px;visibility: inherit">
+                                                                <div id="u10083-5_state0_content"
+                                                                     class="panel_state_content u10083_state0_content"
+                                                                     style="visibility: inherit">
+
+                                                                    <!-- Unnamed (Image) -->
+                                                                    <div id="u10084-5" class="ax_default _图片_ u10084"
+                                                                         style="width: 80px; height: 64px; left: 20px; top: 28px;visibility: inherit">
+                                                                        <img id="u10084-5_img" class="img u10084_img"
+                                                                             src="{% static 'luogu/images/index/u38.png' %}"/>
+                                                                        <div id="u10084-5_text" class="text u10084_text"
+                                                                             style="display:none; visibility: hidden">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="u10082-5"
+                                                             style="display:none; visibility:hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Unnamed (Rectangle) -->
+                        <div id="u10085" class="ax_default box_2">
+                            <div id="u10085_div" class=""></div>
+                            <div id="u10085_text" class="text ">
+                                <p><span>猜你喜欢</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Left_Arrow (Dynamic Panel) -->
+                        <div id="u10086" class="ax_default" data-label="Left_Arrow">
+                            <div id="u10086_state0" class="panel_state" data-label="State1" style="">
+                                <div id="u10086_state0_content" class="panel_state_content">
+
+                                    <!-- Unnamed (Ellipse) -->
+                                    <div id="u10087" class="ax_default ellipse">
+                                        <img id="u10087_img" class="img "
+                                             src="{% static 'luogu/images/商品详情页/u1464.svg' %}"/>
+                                        <div id="u10087_text" class="text " style="display:none; visibility: hidden">
+                                            <p></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Unnamed (Image) -->
+                                    <div id="u10088" class="ax_default _图片_">
+                                        <img id="u10088_img" class="img "
+                                             src="{% static 'luogu/images/商品详情页/u1465.png' %}"/>
+                                        <div id="u10088_text" class="text " style="display:none; visibility: hidden">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right_Arrow (Dynamic Panel) -->
+                        <div id="u10089" class="ax_default" data-label="Right_Arrow">
+                            <div id="u10089_state0" class="panel_state" data-label="State1" style="">
+                                <div id="u10089_state0_content" class="panel_state_content">
+
+                                    <!-- Unnamed (Shape) -->
+                                    <div id="u10090" class="ax_default ellipse">
+                                        <img id="u10090_img" class="img "
+                                             src="{% static 'luogu/images/商品详情页/u1467.svg' %}"/>
+                                        <div id="u10090_text" class="text " style="display:none; visibility: hidden">
+                                            <p></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Unnamed (Image) -->
+                                    <div id="u10091" class="ax_default _图片_">
+                                        <img id="u10091_img" class="img "
+                                             src="{% static 'luogu/images/商品详情页/u1465.png' %}"/>
+                                        <div id="u10091_text" class="text " style="display:none; visibility: hidden">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#        <!-- Unnamed (返回顶部) -->#}
+
+        {#        <!-- Top (Rectangle) -->#}
+        <div id="u10093" class="ax_default box1__eee___ ax_default_hidden" data-label="Top"
+             style="display:none; visibility: hidden">
+            <div id="u10093_div" class=""></div>
+            <div id="u10093_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+        <div id="u10092" style="display:none; visibility:hidden;"></div>
+
+        <!-- Delete_Box (Dynamic Panel) -->
+        <div id="u10094" class="ax_default ax_default_hidden" data-label="Delete_Box"
+             style="display:none; visibility: hidden">
+            <div id="u10094_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10094_state0_content" class="panel_state_content">
+
+                    <!-- Background_Box (Rectangle) -->
+                    <div id="u10095" class="ax_default box_2" data-label="Background_Box">
+                        <div id="u10095_div" class=""></div>
+                        <div id="u10095_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Close_Box (Image) -->
+                    <div id="u10096" class="ax_default _图片_" data-label="Close_Box">
+                        <img id="u10096_img" class="img " src="{% static 'luogu/images/商品详情页/close_box_u1511.png' %}"/>
+                        <div id="u10096_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Ok_Box (Rectangle) -->
+                    <div id="u10097" class="ax_default box_2" data-label="Ok_Box">
+                        <div id="u10097_div" class=""></div>
+                        <div id="u10097_text" class="text ">
+                            <p><span>移入收藏夹</span></p>
+                        </div>
+                    </div>
+
+                    <!-- NO_Box (Rectangle) -->
+                    <div id="u10098" class="ax_default box_2" data-label="NO_Box">
+                        <div id="u10098_div" class=""></div>
+                        <div id="u10098_text" class="text ">
+                            <p><span>删除</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10099" class="ax_default label_14px__red">
+                        <div id="u10099_div" class=""></div>
+                        <div id="u10099_text" class="text ">
+                            <p><span>确定要删除该商品吗？</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prompt_Box (Dynamic Panel) -->
+        <div id="u10100" class="ax_default ax_default_hidden" data-label="Prompt_Box"
+             style="display:none; visibility: hidden">
+            <div id="u10100_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10100_state0_content" class="panel_state_content">
+
+                    <!-- Rpt_Box1 (Repeater) -->
+                    <div id="u10101" class="ax_default" data-label="Rpt_Box1">
+                        <script id="u10101_script" type="axure-repeater-template" data-label="Rpt_Box1">
+
+                            <!-- Background_Rpt_Box1 (Rectangle) -->
+                            <div id="u10102" class="ax_default box_3 u10102" data-label="Background_Rpt_Box1">
+                                <div id="u10102_div" class="u10102_div"></div>
+                                <div id="u10102_text" class="text u10102_text">
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Words_Rpt_Box1 (Rectangle) -->
+                            <div id="u10103" class="ax_default _文本段落1 u10103" data-label="Words_Rpt_Box1">
+                                <div id="u10103_div" class="u10103_div"></div>
+                                <div id="u10103_text" class="text u10103_text">
+                                    <p style="font-size:16px;"><span style="color:#FFFFFF;">提示语</span><span
+                                            style="font-size:14px;color:#CCCCCC;">（建议10个字内）</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Rpt_Box1 (Dynamic Panel) -->
+                            <div id="u10104" class="ax_default u10104" data-label="Icon_Rpt_Box1">
+                                <div id="u10104_state0" class="panel_state u10104_state0" data-label="Other_Icon_Prompt"
+                                     style="">
+                                    <div id="u10104_state0_content" class="panel_state_content u10104_state0_content">
+                                    </div>
+                                </div>
+                                <div id="u10104_state1" class="panel_state u10104_state1"
+                                     data-label="Correct_Icon_Prompt" style="visibility: hidden;">
+                                    <div id="u10104_state1_content" class="panel_state_content u10104_state1_content">
+
+                                        <!-- Unnamed (Image) -->
+                                        <div id="u10105" class="ax_default image u10105">
+                                            <img id="u10105_img" class="img u10105_img"
+                                                 src="{% static 'luogu/images/商品详情页/u1546.png' %}"/>
+                                            <div id="u10105_text" class="text u10105_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="u10104_state2" class="panel_state u10104_state2" data-label="Error_Icon_Prompt"
+                                     style="visibility: hidden;">
+                                    <div id="u10104_state2_content" class="panel_state_content u10104_state2_content">
+
+                                        <!-- Unnamed (Image) -->
+                                        <div id="u10106" class="ax_default image u10106">
+                                            <img id="u10106_img" class="img u10106_img"
+                                                 src="{% static 'luogu/images/商品详情页/u1547.png' %}"/>
+                                            <div id="u10106_text" class="text u10106_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                        <div id="u10101-1" class="" style="width: 231px; height: 120px;">
+
+                            <!-- Background_Rpt_Box1 (Rectangle) -->
+                            <div id="u10102-1" class="ax_default box_3 u10102" data-label="Background_Rpt_Box1"
+                                 style="width: 231px; height: 120px; left: 0px; top: 0px;visibility: inherit">
+                                <div id="u10102-1_div" class="u10102_div"
+                                     style="width: 231px; height: 120px;visibility: inherit"></div>
+                                <div id="u10102-1_text" class="text u10102_text" style="visibility: inherit">
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Words_Rpt_Box1 (Rectangle) -->
+                            <div id="u10103-1" class="ax_default _文本段落1 u10103" data-label="Words_Rpt_Box1"
+                                 style="width: 231px; height: 30px; left: 0px; top: 69px;visibility: inherit">
+                                <div id="u10103-1_div" class="u10103_div"
+                                     style="width: 231px; height: 30px;visibility: inherit"></div>
+                                <div id="u10103-1_text" class="text u10103_text" style="visibility: inherit">
+                                    <p style="font-size:16px;"><span style="color:#FFFFFF;">提示语</span><span
+                                            style="font-size:14px;color:#CCCCCC;">（建议10个字内）</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Rpt_Box1 (Dynamic Panel) -->
+                            <div id="u10104-1" class="ax_default u10104" data-label="Icon_Rpt_Box1"
+                                 style="visibility: inherit">
+                                <div id="u10104-1_state0" class="panel_state u10104_state0"
+                                     data-label="Other_Icon_Prompt"
+                                     style=" width: 38px; height: 38px;visibility: inherit">
+                                    <div id="u10104-1_state0_content" class="panel_state_content u10104_state0_content"
+                                         style="visibility: inherit">
+                                    </div>
+                                </div>
+                                <div id="u10104-1_state1" class="panel_state u10104_state1"
+                                     data-label="Correct_Icon_Prompt"
+                                     style="visibility: hidden; width: 38px; height: 38px;visibility: inherit">
+                                    <div id="u10104-1_state1_content" class="panel_state_content u10104_state1_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Unnamed (Image) -->
+                                        <div id="u10105-1" class="ax_default image u10105"
+                                             style="width: 38px; height: 38px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u10105-1_img" class="img u10105_img"
+                                                 src="{% static 'luogu/images/商品详情页/u1546.png' %}"/>
+                                            <div id="u10105-1_text" class="text u10105_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="u10104-1_state2" class="panel_state u10104_state2"
+                                     data-label="Error_Icon_Prompt"
+                                     style="visibility: hidden; width: 38px; height: 38px;visibility: inherit">
+                                    <div id="u10104-1_state2_content" class="panel_state_content u10104_state2_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Unnamed (Image) -->
+                                        <div id="u10106-1" class="ax_default image u10106"
+                                             style="width: 32px; height: 32px; left: 3px; top: 5px;visibility: inherit">
+                                            <img id="u10106-1_img" class="img u10106_img"
+                                                 src="{% static 'luogu/images/商品详情页/u1547.png' %}"/>
+                                            <div id="u10106-1_text" class="text u10106_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            // 为 class = divImgIn 的控件绑定 click 事件
+            $(".no_select").click(function () {
+                // 使用 toggleClass ，如果 class 中没有 divImgOut 则附加上，有则减掉
+                $(this).toggleClass("select");
+                // 获得当前的 class ，要么是 divImgIn ，要么是 divImgIn divImgOut
+                var css = $(this).attr("class");
+                console.log(css);
+                // 这个逻辑判断根据你的需求写
+                if ($(this).hasClass("select")) {
+                    console.log(1);
+                    console.log($(this).attr("src"));
+                    $(this).attr("z-index", 1)
+                } else {
+                    console.log(2);
+                    console.log($(this).attr("src"));
+                    $(this).attr("z-index", 0)
+                }
+            })
+
+        })
+    </script>
+    <script src="{% static 'luogu/resources/scripts/axure/ios.js' %}"></script>
+    <script>
+        $.ajaxSetup({
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+        });
+        $(".commodity_quantity").change(function (event) {
+            var id = event.currentTarget.attributes.name.value;
+            var num = $("input[name=" + id.toString() + "]").val();
+            block = $("span[name=" + id.toString() + "]");
+            block[0].innerHTML = num * block.attr("price");
+
+            change_total_money();
+            $.ajax({
+                type: "POST",
+                data: {id: id, num: num, operate: "change"},
+                url: "/shopping_cart_change", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                cache: false,
+                dataType: "html",
+                success: function (ret) {
+                    console.log(ret);
+                },
+                error: function () {
+                }
+            });
+        });
+        $(".sub").click(function (event) {
+            var id = event.currentTarget.attributes.name.value;
+            block = $("input[name=" + id.toString() + "]");
+            var num = block.val();
+            if (num == 1) return false;
+            block.val(num - 1);
+            console.log(1);
+            block = $("span[name=" + id.toString() + "]");
+            var price = block.attr("price");
+            block[0].innerHTML = (num - 1) * price;
+
+            change_total_money();
+            /*
+            real_pay = $("#real_pay")[0];
+            total_account = $("#total_account")[0];
+            block = $("span[name=" + id.toString() + "]")[0];
+            if($("input[name='check_box_list'][value=" + id.toString() + "]").is(":checked")){
+                total_account.innerText = real_pay.innerText = parseFloat(real_pay.innerText) - parseFloat(price);
+            }
+            */
+            $.ajax({
+                type: "POST",
+                data: {id: id, num: num - 1, operate: "change"},
+                url: "/shopping_cart_change", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                cache: false,
+                dataType: "html",
+                success: function (ret) {
+                    console.log(ret);
+                },
+                error: function () {
+                }
+            });
+        });
+        $(".add").click(function (event) {
+            var id = event.currentTarget.attributes.name.value;
+            block = $("input[name=" + id.toString() + "]");
+            var num = block.val();
+            block.val(parseInt(num) + 1);
+            block = $("span[name=" + id.toString() + "]");
+            var price = block.attr("price");
+            block[0].innerHTML = (parseInt(num) + 1) * price;
+
+            change_total_money();
+            /*
+
+            real_pay = $("#real_pay")[0];
+            total_account = $("#total_account")[0];
+            block = $("span[name=" + id.toString() + "]")[0];
+            if($("input[name='check_box_list'][value=" + id.toString() + "]").is(":checked")){
+                total_account.innerText = real_pay.innerText = parseFloat(real_pay.innerText) + parseFloat(price);
+            }
+            */
+            $.ajax({
+                type: "POST",
+                data: {id: id, num: parseInt(num) + 1, operate: "change"},
+                url: "/shopping_cart_change", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                cache: false,
+                dataType: "html",
+                success: function (ret) {
+                    console.log(ret);
+                },
+                error: function () {
+                }
+            });
+        });
+        $("#xiadan").click(function () {
+            checkboxes = $("input[name='check_box_list']");
+            var buy = [];
+            var num = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    var id = checkboxes[i].value;
+                    buy.push(id);
+                    {#console.log($("input[name="+id.toString()+"]")[0]);#}
+                    num.push($("input[name=" + id.toString() + "]")[0].value);
+                }
+            }
+            console.log(buy);
+            console.log(num);
+            if (buy.length == 0) {
+                alert("请选择商品");
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                data: {buy: buy, num: num},
+                url: "/购物车.html", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                cache: false,
+                dataType: "html",
+                success: function (res) {
+                    console.log(res);
+                    var dict = JSON.parse(res);
+                    if (!dict["result"]) {
+                        alert(dict["message"]);
+                        return false;
+                    }
+                    console.log("/订单结算.html/" + dict["order_id"].toString());
+                    window.location.href = "/订单结算.html/" + dict["order_id"].toString();
+                },
+                error: function () {
+                }
+            });
+            return false;
+        });
+        $("input[name='check_box_list']").click(function (event) {
+
+            change_total_money();
+            /*
+            var id = event.currentTarget.attributes.value.value;
+            real_pay = $("#real_pay")[0];
+            total_account = $("#total_account")[0];
+            block = $("span[name=" + id.toString() + "]")[0];
+            if($("input[name='check_box_list'][value=" + id.toString() + "]").is(":checked")){
+                total_account.innerText = real_pay.innerText = parseFloat(real_pay.innerText) + parseFloat(block.innerHTML);
+            }else{
+                total_account.innerText = real_pay.innerText = parseFloat(real_pay.innerText) - parseFloat(block.innerHTML);
+            }
+            */
+        });
+        $(".delete_product").click(function (event) {
+            var id = event.currentTarget.attributes.name.value;
+            console.log(id);
+            $.ajax({
+                type: "POST",
+                data: {id: id, operate: "delete"},
+                url: "/shopping_cart_change", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致
+                cache: false,
+                dataType: "html",
+                success: function (res) {
+                    res = JSON.parse(res)["res"];
+                    if (res) {
+                        location.reload();
+                    }
+                    {#alert(result);                                         //成功时弹出view传回来的结果#}
+                },
+                error: function () {
+                    {#alert("false");#}
+                }
+            });
+        })
+        $("#u10027").click(function () {
+            var check = false;
+            console.log(1);
+            if ($("#u10027").css("opacity") == 0) {
+                $("#u10027").css("opacity", 1);
+            } else {
+                $("#u10027").css("opacity", 0);
+                check = true;
+            }
+            checkboxes = $("input[name='check_box_list']");
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = !check;
+            }
+            change_total_money();
+        });
+
+        function change_total_money() {
+            ls = $("input[name='check_box_list']");
+            sum = 0;
+            for (var i = 0; i < ls.length; i++) {
+                if (ls[i].checked) {
+                    id = ls[i].value;
+                    block = $("span[name=" + id.toString() + "]")[0];
+                    sum += parseFloat(block.innerHTML);
+                }
+            }
+            total_account.innerText = real_pay.innerText = sum;
+        }
+    </script>
+    {#    </body>#}
+
+{% endblock %}

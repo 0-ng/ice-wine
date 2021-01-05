@@ -1,0 +1,70 @@
+﻿{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block upjs %}
+    <title>第三方支付</title>
+    <link href="{% static 'luogu/files/第三方支付/styles.css' %}" type="text/css" rel="stylesheet"/>
+    {#    <script src="{% static 'luogu/files/第三方支付/data.js' %}"></script>#}
+{% endblock %}
+
+{% block main %}
+    <body>
+    <div id="base" class="">
+
+        <!-- Unnamed (Dynamic Panel) -->
+        <div id="u10776" class="ax_default">
+            <div id="u10776_state0" class="panel_state" data-label="State1" style="">
+                <div id="u10776_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u10777" class="ax_default label_14px__red">
+                        <div id="u10777_div" class=""></div>
+                        <div id="u10777_text" class="text ">
+                            <p><span>第三方支付界面</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u10778" class="ax_default box1__eee">
+            <div id="u10778_div" class=""></div>
+            <div id="u10778_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u10779" class="ax_default" data-left="490" data-top="206" data-width="220" data-height="308">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u10780" class="ax_default label_14px__red">
+                <div id="u10780_div" class=""></div>
+                <div id="u10780_text" class="text ">
+                    <p><span>{{ real_payment|stringformat:".2f" }}</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <form action="/第三方支付.html/{{ order_id }}" method="post">
+                {% csrf_token %}
+                <button id="u10781" class="ax_default _图片_" style="cursor:pointer;">
+                    <img id="u10781_img" class="img " src="{% static 'luogu/images/第三方支付/u10781.png' %}"/>
+                    <div id="u10781_text" class="text " style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </button>
+            </form>
+            <!-- Unnamed (Rectangle) -->
+            <div id="u10782" class="ax_default label_14px__red">
+                <div id="u10782_div" class=""></div>
+                <div id="u10782_text" class="text ">
+                    <p><span>扫一扫付款（元）</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'luogu/resources/scripts/axure/ios.js' %}"></script>
+    </body>
+{% endblock %}

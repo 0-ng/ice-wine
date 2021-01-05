@@ -1,0 +1,106 @@
+{% extends 'xadmin/base_site.html' %}
+
+{% block content %}
+
+
+    {% block content-nav %}
+    {% endblock %}
+    {% load staticfiles %}
+
+    <div class="mt-2">
+        <!--左导航栏-->
+        <!--使用了弹性布局，bootstrap4专有mt-2,使用 d-flex 类创建一个弹性盒子容器，并设置2个弹性子元素-->
+        <div class="d-flex">
+
+            <!--内容部分-->
+            <div class="bg-light">
+
+
+                <!--内容部分-->
+                <div class="content">
+                    <!--图表-->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="main" style="width:1224px;height:720px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{#    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">#}
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'luogu/resources/scripts/jquery-3.2.1.min.js' %}"></script>
+
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'luogu/files/员工业绩/performance.css' %}"/>
+    <script src="{% static 'luogu/files/员工业绩/performance.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'luogu/files/员工业绩/Echarts.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        setTimeout(function () {
+            option = {
+                legend: {},
+                tooltip: {
+                    trigger: 'axis',
+                    showContent: false
+                },
+                dataset: {
+                    source: [
+                        {% for list in ret_lists %}
+                            {{ list|safe }},
+                        {% endfor %}
+                    ]
+                },
+                xAxis: {type: 'category'},
+                yAxis: {gridIndex: 0},
+                grid: {top: '55%'},
+                series: [
+                    {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                    {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                    {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                    {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                    {
+                        type: 'pie',
+                        id: 'pie',
+                        radius: '30%',
+                        center: ['50%', '25%'],
+                        label: {
+                            formatter: '{b}: {@2012} ({d}%)'
+                        },
+                        encode: {
+                            itemName: 'product',
+                            value: '2012',
+                            tooltip: '2012'
+                        }
+                    }
+                ]
+            };
+            myChart.on('updateAxisPointer', function (event) {
+                var xAxisInfo = event.axesInfo[0];
+                if (xAxisInfo) {
+                    var dimension = xAxisInfo.value + 1;
+                    myChart.setOption({
+                        series: {
+                            id: 'pie',
+                            label: {
+                                formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+                            },
+                            encode: {
+                                value: dimension,
+                                tooltip: dimension
+                            }
+                        }
+                    });
+                }
+            });
+            myChart.setOption(option);
+        });
+
+
+    </script>
+{% endblock %}

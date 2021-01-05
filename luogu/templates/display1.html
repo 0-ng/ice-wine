@@ -1,0 +1,224 @@
+{% extends 'xadmin/base_site.html' %}
+
+{% block content %}
+
+
+    {% block content-nav %}
+    {% endblock %}
+    {% load staticfiles %}
+
+    <div class="mt-2">
+        <div class="d-flex">
+
+            <div class="content">
+                <!--图表17 10-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="main1" style="width:1224px;height:720px;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {#	      <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">#}
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'luogu/files/员工业绩/performance.css' %}"/>
+    <script src="{% static 'luogu/files/员工业绩/performance.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+        $.when(
+            $.getScript('https://www.runoob.com/static/js/timelineGDP.js'),
+            $.getScript('https://www.runoob.com/static/js/draggable.js')
+        ).done(function () {
+            myChart.hideLoading();
+            var categoryData = [
+                '商品销量'
+            ];
+            option = {
+                baseOption: {
+                    timeline: {
+                        axisType: 'category',
+                        autoPlay: true,
+                        playInterval: 1000,
+                        data: [
+                            '2020-01-01'
+                        ],
+                        label: {
+                            formatter: function (s) {
+                                return (new Date(s)).getFullYear();
+                            }
+                        }
+                    },
+                    title: {
+                        subtext: 'Media Query'
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        }
+                    },
+                    xAxis: {
+                        type: 'value',
+                        name: '件',
+                        max: 30000,
+                        data: null
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: categoryData,
+                        axisLabel: {interval: 0},
+                        splitLine: {show: false}
+                    },
+                    legend: {
+                        data: {{ products|safe }},
+                        selected: {
+                            // '第一产业': false, '第二产业': false, '第三产业': false,
+                            {#'GDP': false, '金融': false, '房地产': false#}
+                        }
+                    },
+                    calculable: true,
+                    series: [
+                        {% for product in products %}
+                        {name: '{{ product }}', type: 'bar'},
+                        {% endfor %}
+                        {name: 'GDP占比', type: 'pie'}
+                    ]
+                },
+                media: [
+                    {
+                        option: {
+                            legend: {
+                                orient: 'horizontal',
+                                left: 'right',
+                                itemGap: 10
+                            },
+                            grid: {
+                                left: '10%',
+                                top: 80,
+                                right: 90,
+                                bottom: 100
+                            },
+                            xAxis: {
+                                nameLocation: 'end',
+                                nameGap: 10,
+                                splitNumber: 5,
+                                splitLine: {
+                                    show: true
+                                }
+                            },
+                            timeline: {
+                                orient: 'horizontal',
+                                inverse: false,
+                                left: '20%',
+                                right: '20%',
+                                bottom: 10,
+                                height: 40
+                            },
+                            series: [
+                                {name: 'GDP占比', center: ['85%', '30%'], radius: '28%'}
+                            ]
+                        }
+                    },
+                    {
+                        query: {maxWidth: 670, minWidth: 550},
+                        option: {
+                            legend: {
+                                orient: 'horizontal',
+                                left: 200,
+                                itemGap: 5
+                            },
+                            grid: {
+                                left: '10%',
+                                top: 80,
+                                right: 90,
+                                bottom: 100
+                            },
+                            xAxis: {
+                                nameLocation: 'end',
+                                nameGap: 10,
+                                splitNumber: 5,
+                                splitLine: {
+                                    show: true
+                                }
+                            },
+                            timeline: {
+                                orient: 'horizontal',
+                                inverse: false,
+                                left: '20%',
+                                right: '20%',
+                                bottom: 10,
+                                height: 40
+                            },
+                            series: [
+                                {name: 'GDP占比', center: ['75%', '30%'], radius: '28%'}
+                            ]
+                        }
+                    },
+                    {
+                        query: {maxWidth: 550},
+                        option: {
+                            legend: {
+                                orient: 'vertical',
+                                left: 'right',
+                                itemGap: 5
+                            },
+                            grid: {
+                                left: 55,
+                                top: '32%',
+                                right: 100,
+                                bottom: 50
+                            },
+                            xAxis: {
+                                nameLocation: 'middle',
+                                nameGap: 25,
+                                splitNumber: 3
+                            },
+                            timeline: {
+                                orient: 'vertical',
+                                inverse: true,
+                                right: 10,
+                                top: 150,
+                                bottom: 10,
+                                width: 55
+                            },
+                            series: [
+                                {name: 'GDP占比', center: ['45%', '20%'], radius: '28%'}
+                            ]
+                        }
+                    }
+                ],
+                options: [
+                    {
+                        title: {text: '商品销量分析'},
+                        series: [
+                            {% for sale in sales %}
+                            {
+                                data: [
+                                    {name: '', value: {{ sale }}}
+                                ]
+                            },
+                            {% endfor %}
+                            {
+                                data: [
+                                    {% for data in datas %}
+                                    {name: '{{ data.name }}', value: {{ data.sale }} },
+                                    {% endfor %}
+                                ]
+                            },
+                        ]
+                    }
+                ]
+            };
+            console.log(dataMap.dataGDP['2011']);
+            myChart.setOption(option);
+
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="{% static 'luogu/resources/css/axure_rp_page.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'luogu/data/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <script src="{% static 'luogu/resources/scripts/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/axQuery.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/globals.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axutils.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/annotation.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/axQuery.std.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/doc.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/messagecenter.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/events.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/recording.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/action.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/expr.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/geometry.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/flyout.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/model.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/repeater.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/sto.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/utils.temp.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/variables.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/drag.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/move.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/visibility.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/style.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/adaptive.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/tree.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/init.temp.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/legacy.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/viewer.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/math.js' %}"></script>
+    <script src="{% static 'luogu/resources/scripts/axure/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'luogu/data/document.js' %}"></script>
+    {% block upjs %}{% endblock %}
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return "{% static 'luogu/resources/images/transparent.gif' %}"; };
+      $axure.utils.getOtherPath = function() { return "{% static 'luogu/resources/Other.html' %}"; };
+      $axure.utils.getReloadPath = function() { return "{% static 'luogu/resources/reload.html' %}"; };
+    </script>
+  </head>
+{% block main %}
+{% endblock %}
+</html>

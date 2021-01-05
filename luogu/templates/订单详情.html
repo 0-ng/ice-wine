@@ -1,0 +1,2741 @@
+﻿{% extends "base_nav.html" %}
+{% load staticfiles %}
+
+{% block upjs %}
+    <title>订单详情</title>
+    <link href="{% static 'luogu/files/订单详情/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <script src="{% static 'luogu/files/订单详情/data.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+{#    <body>#}
+    <div id="base" class="">
+
+        <!-- Head2 (Dynamic Panel) -->
+        <div id="u3714" class="ax_default ax_default_hidden" data-label="Head2"
+             style="display:none; visibility: hidden">
+            <div id="u3714_state0" class="panel_state" data-label="State1" style="">
+                <div id="u3714_state0_content" class="panel_state_content">
+
+                    <!-- 2_Background_Head (Dynamic Panel) -->
+                    <div id="u3715" class="ax_default" data-label="2_Background_Head">
+                        <div id="u3715_state0" class="panel_state" data-label="State1" style="">
+                            <div id="u3715_state0_content" class="panel_state_content">
+
+                                <!-- Unnamed (Rectangle) -->
+                                <div id="u3716" class="ax_default _一级标题">
+                                    <div id="u3716_div" class=""></div>
+                                    <div id="u3716_text" class="text ">
+                                        <p><span>点击这里 下载原型</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 1_Nav (Rectangle) -->
+                                <div id="u3717" class="ax_default label_14px__red" data-label="1_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3717_div" class=""></div>
+                                    <div id="u3717_text" class="text ">
+                                        <p><span>首页</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 2_Nav (Rectangle) -->
+                                <div id="u3718" class="ax_default label_14px__red" data-label="2_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3718_div" class=""></div>
+                                    <div id="u3718_text" class="text ">
+                                        <p><span>居家</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 8_Nav (Rectangle) -->
+                                <div id="u3719" class="ax_default label_14px__red" data-label="8_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3719_div" class=""></div>
+                                    <div id="u3719_text" class="text ">
+                                        <p><span>婴童</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 3_Nav (Rectangle) -->
+                                <div id="u3720" class="ax_default label_14px__red" data-label="3_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3720_div" class=""></div>
+                                    <div id="u3720_text" class="text ">
+                                        <p><span>服装</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 4_Nav (Rectangle) -->
+                                <div id="u3721" class="ax_default label_14px__red" data-label="4_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3721_div" class=""></div>
+                                    <div id="u3721_text" class="text ">
+                                        <p><span>电器</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 5_Nav (Rectangle) -->
+                                <div id="u3722" class="ax_default label_14px__red" data-label="5_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3722_div" class=""></div>
+                                    <div id="u3722_text" class="text ">
+                                        <p><span>洗护</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 6_Nav (Rectangle) -->
+                                <div id="u3723" class="ax_default label_14px__red" data-label="6_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3723_div" class=""></div>
+                                    <div id="u3723_text" class="text ">
+                                        <p><span>饮食</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- 7_Nav (Rectangle) -->
+                                <div id="u3724" class="ax_default label_14px__red" data-label="7_Nav"
+                                     selectiongroup="u3575nav">
+                                    <div id="u3724_div" class=""></div>
+                                    <div id="u3724_text" class="text ">
+                                        <p><span>餐厨</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Unnamed (Rectangle) -->
+                                <div id="u3725" class="ax_default _三级标题">
+                                    <div id="u3725_div" class=""></div>
+                                    <div id="u3725_text" class="text ">
+                                        <p><span>电商Web原型</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2_Line_Background_Head (Dynamic Panel) -->
+                    <div id="u3726" class="ax_default" data-label="2_Line_Background_Head">
+                        <div id="u3726_state0" class="panel_state" data-label="State1" style="">
+                            <div id="u3726_state0_content" class="panel_state_content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="u3575" style="display:none; visibility:hidden;"></div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3727" class="ax_default box_2">
+            <div id="u3727_div" class=""></div>
+            <div id="u3727_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Vertical Line) -->
+        <div id="u3728" class="ax_default line">
+            <img id="u3728_img" class="img " src="{% static 'luogu/images/订单详情/u3728.svg' %}"/>
+            <div id="u3728_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (商品信息) -->
+
+        <!-- Rpt_Cart (Repeater) -->
+        <div id="u3730" style="height: {{ down_height }}px" class="ax_default" data-label="Rpt_Cart">
+            <script id="u3730_script" type="axure-repeater-template" data-label="Rpt_Cart">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u3731" class="ax_default box1__eee u3731">
+                    <div id="u3731_div" class="u3731_div"></div>
+                    <div id="u3731_text" class="text u3731_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u3732" class="ax_default box_2 u3732">
+                    <div id="u3732_div" class="u3732_div"></div>
+                    <div id="u3732_text" class="text u3732_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Image) -->
+                <div id="u3733" style="display: none"></div>
+{#                <div id="" class="ax_default _图片_ u3733">#}
+                    <img id="" class="img u3733_img" src="{% static 'luogu/images/index/u38.png' %}"/>
+                    <div id="" class="text u3733_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+{#                </div>#}
+
+                <!-- Name (Rectangle) -->
+                <div id="u3734" class="ax_default label_14px__red u3734" data-label="Name">
+                    <div id="u3734_div" class="u3734_div"></div>
+                    <div id="u3734_text" class="text u3734_text">
+                        <p><span>商品名称</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u3735" class="ax_default label_14px__red u3735">
+                    <div id="u3735_div" class="u3735_div"></div>
+                    <div id="u3735_text" class="text u3735_text">
+                        <p><span>颜色：红色&nbsp;&nbsp; 尺码：S</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) -->
+                <div id="u3736" class="ax_default u3736" data-left="548" data-top="45" data-width="48" data-height="30">
+
+                    <!-- Price (Rectangle) -->
+                    <div id="u3737" class="ax_default label_14px__red u3737" data-label="Price">
+                        <div id="u3737_div" class="u3737_div"></div>
+                        <div id="u3737_text" class="text u3737_text">
+                            <p><span>单价</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3738" class="ax_default label_14px__red u3738">
+                        <div id="u3738_div" class="u3738_div"></div>
+                        <div id="u3738_text" class="text u3738_text">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Number (Rectangle) -->
+                <div id="u3739" class="ax_default label_14px__red u3739" data-label="Number">
+                    <div id="u3739_div" class="u3739_div"></div>
+                    <div id="u3739_text" class="text u3739_text">
+                        <p><span>数量</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) -->
+                <div id="u3740" class="ax_default u3740" data-left="903" data-top="45" data-width="45" data-height="30">
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3741" class="ax_default label_14px__red u3741">
+                        <div id="u3741_div" class="u3741_div"></div>
+                        <div id="u3741_text" class="text u3741_text">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Total (Rectangle) -->
+                    <div id="u3742" class="ax_default label_14px__red u3742" data-label="Total">
+                        <div id="u3742_div" class="u3742_div"></div>
+                        <div id="u3742_text" class="text u3742_text">
+                            <p><span>小计</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) -->
+                <div id="u3743" class="ax_default u3743" data-left="1086" data-top="45" data-width="45"
+                     data-height="30">
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3744" class="ax_default label_14px__red u3744">
+                        <div id="u3744_div" class="u3744_div"></div>
+                        <div id="u3744_text" class="text u3744_text">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3745" class="ax_default label_14px__red u3745">
+                        <div id="u3745_div" class="u3745_div"></div>
+                        <div id="u3745_text" class="text u3745_text">
+                            <p><span>实付</span></p>
+                        </div>
+                    </div>
+                </div>
+            </script>
+            {% for product in products %}
+{#                u3730-1#}
+            <div id="" class="preeval u1" style="top:{{ product.top }}px;width: 1200px; height: 120px;">
+                <!-- Unnamed (Rectangle) u3731-1 u3731-1_div u3731-1_text-->
+                <div id="" class="ax_default box1__eee u3731"
+                     style="width: 1200px; height: 120px; left: 0px; top: 0px;visibility: inherit">
+                    <div id="" class="u3731_div"
+                         style="width: 1200px; height: 120px;visibility: inherit"></div>
+                    <div id="" class="text u3731_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) u3732-1 u3732-1_div u3732-1_text-->
+                <div id="" class="ax_default box_2 u3732"
+                     style="width: 75px; height: 75px; left: 35px; top: 23px;visibility: inherit">
+                    <div id="" class="u3732_div" style="width: 75px; height: 75px;visibility: inherit"></div>
+                    <div id="" class="text u3732_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Image) u3733-1 u3733-1_img u3733-1_text -->
+                <div id="" class="ax_default _图片_ u3733">
+                    <img id="" class="img u3733_img" src="/media/{{ product.img }}"/>
+                    <div id="" class="text u3733_text" style="display:none; visibility: hidden">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Name (Rectangle) u3734-1 u3734-1_div u3734-1_text-->
+                <div id="" class="ax_default label_14px__red u3734" data-label="Name"
+                     style="width: 260px; height: 30px; left: 130px; top: 24px;visibility: inherit">
+                    <div id="" class="u3734_div"
+                         style="width: 260px; height: 30px;visibility: inherit"></div>
+                    <div id="" class="text u3734_text" style="visibility: inherit">
+                        <p><span>{{ product.name }}</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) u3735-1 u3735-1_div u3735-1_text-->
+                <div id="" class="ax_default label_14px__red u3735"
+                     style="width: 260px; height: 30px; left: 130px; top: 56px;visibility: inherit">
+                    <div id="" class="u3735_div"
+                         style="width: 260px; height: 30px;visibility: inherit"></div>
+                    <div id="" class="text u3735_text" style="visibility: inherit">
+                        <p><span>规格: {{ product.standard }}ml</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) u3736-1 -->
+                <div id="" class="ax_default u3736" style="visibility: inherit" data-left="548" data-top="45"
+                     data-width="48" data-height="30">
+
+                    <!-- Price (Rectangle) u3737-1 u3737-1_div u3737-1_text-->
+                    <div id="" class="ax_default label_14px__red u3737" data-label="Price"
+                         style="width: 32px; height: 30px; left: 564px; top: 45px;visibility: inherit">
+                        <div id="" class="u3737_div"
+                             style="width: 32px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u3737_text" style="visibility: inherit">
+                            <p><span>{{ product.unit_price|stringformat:".2f" }}</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) u3738-1 u3738-1_div u3738-1_text-->
+                    <div id="" class="ax_default label_14px__red u3738"
+                         style="width: 14px; height: 30px; left: 548px; top: 45px;visibility: inherit">
+                        <div id="" class="u3738_div"
+                             style="width: 14px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u3738_text" style="visibility: inherit">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Number (Rectangle) u3739-1 u3739-1_div u3739-1_text-->
+                <div id="" class="ax_default label_14px__red u3739" data-label="Number"
+                     style="width: 32px; height: 30px; left: 734px; top: 45px;visibility: inherit">
+                    <div id="" class="u3739_div" style="width: 32px; height: 30px;visibility: inherit"></div>
+                    <div id="" class="text u3739_text" style="visibility: inherit">
+                        <p><span>{{ product.num }}</span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) u3740-1 -->
+                <div id="" class="ax_default u3740" style="visibility: inherit" data-left="903" data-top="45"
+                     data-width="45" data-height="30">
+
+                    <!-- Unnamed (Rectangle) u3741-1 u3741-1_div u3741-1_text-->
+                    <div id="" class="ax_default label_14px__red u3741"
+                         style="width: 14px; height: 30px; left: 903px; top: 45px;visibility: inherit">
+                        <div id="" class="u3741_div"
+                             style="width: 14px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u3741_text" style="visibility: inherit">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Total (Rectangle) u3742-1 u3742-1_div u3742-1_text-->
+                    <div id="" class="ax_default label_14px__red u3742" data-label="Total"
+                         style="width: 28px; height: 30px; left: 920px; top: 45px;visibility: inherit">
+                        <div id="" class="u3742_div"
+                             style="width: 28px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u3742_text" style="visibility: inherit">
+                            <p><span>{{ product.sum|stringformat:".2f" }}</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Group) u3743-1 -->
+                <div id="" class="ax_default u3743" style="visibility: inherit" data-left="1086" data-top="45"
+                     data-width="45" data-height="30">
+
+                    <!-- Unnamed (Rectangle) u3744-1 u3744-1_div u3744-1_text-->
+                    <div id="" class="ax_default label_14px__red u3744"
+                         style="width: 14px; height: 30px; left: 1086px; top: 45px;visibility: inherit">
+                        <div id="" class="u3744_div"
+                             style="width: 14px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u3744_text" style="visibility: inherit">
+                            <p><span>￥</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) u3745-1 u3745-1_div u3745-1_text-->
+                    <div id="" class="ax_default label_14px__red u3745"
+                         style="width: 28px; height: 30px; left: 1103px; top: 45px;visibility: inherit">
+                        <div id="" class="u3745_div"
+                             style="width: 28px; height: 30px;visibility: inherit"></div>
+                        <div id="" class="text u3745_text" style="visibility: inherit">
+                            <p><span>{{ product.real_payment|stringformat:".2f" }}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+{#            <div id="u3730-2" class="preeval" style="width: 1200px; height: 120px;">#}
+{##}
+{#                <!-- Unnamed (Rectangle) -->#}
+{#                <div id="u3731-2" class="ax_default box1__eee u3731"#}
+{#                     style="width: 1200px; height: 120px; left: 0px; top: 0px;visibility: inherit">#}
+{#                    <div id="u3731-2_div" class="u3731_div"#}
+{#                         style="width: 1200px; height: 120px;visibility: inherit"></div>#}
+{#                    <div id="u3731-2_text" class="text u3731_text" style="display:none; visibility: hidden">#}
+{#                        <p></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Rectangle) -->#}
+{#                <div id="u3732-2" class="ax_default box_2 u3732"#}
+{#                     style="width: 75px; height: 75px; left: 35px; top: 23px;visibility: inherit">#}
+{#                    <div id="u3732-2_div" class="u3732_div" style="width: 75px; height: 75px;visibility: inherit"></div>#}
+{#                    <div id="u3732-2_text" class="text u3732_text" style="display:none; visibility: hidden">#}
+{#                        <p></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Image) -->#}
+{#                <div id="u3733-2" class="ax_default _图片_ u3733"#}
+{#                     style="width: 45px; height: 36px; left: 50px; top: 43px;visibility: inherit">#}
+{#                    <img id="u3733-2_img" class="img u3733_img" src="{% static 'luogu/images/index/u38.png' %}"/>#}
+{#                    <div id="u3733-2_text" class="text u3733_text" style="display:none; visibility: hidden">#}
+{#                        <p></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Name (Rectangle) -->#}
+{#                <div id="u3734-2" class="ax_default label_14px__red u3734" data-label="Name"#}
+{#                     style="width: 260px; height: 30px; left: 130px; top: 24px;visibility: inherit">#}
+{#                    <div id="u3734-2_div" class="u3734_div"#}
+{#                         style="width: 260px; height: 30px;visibility: inherit"></div>#}
+{#                    <div id="u3734-2_text" class="text u3734_text" style="visibility: inherit">#}
+{#                        <p><span>Speed 儿童酷炫极速自行车</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Rectangle) -->#}
+{#                <div id="u3735-2" class="ax_default label_14px__red u3735"#}
+{#                     style="width: 260px; height: 30px; left: 130px; top: 56px;visibility: inherit">#}
+{#                    <div id="u3735-2_div" class="u3735_div"#}
+{#                         style="width: 260px; height: 30px;visibility: inherit"></div>#}
+{#                    <div id="u3735-2_text" class="text u3735_text" style="visibility: inherit">#}
+{#                        <p><span>颜色：红色&nbsp;&nbsp; 尺码：S</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Group) -->#}
+{#                <div id="u3736-2" class="ax_default u3736" style="visibility: inherit" data-left="548" data-top="45"#}
+{#                     data-width="48" data-height="30">#}
+{##}
+{#                    <!-- Price (Rectangle) -->#}
+{#                    <div id="u3737-2" class="ax_default label_14px__red u3737" data-label="Price"#}
+{#                         style="width: 32px; height: 30px; left: 564px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3737-2_div" class="u3737_div"#}
+{#                             style="width: 32px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3737-2_text" class="text u3737_text" style="visibility: inherit">#}
+{#                            <p><span>单价</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3738-2" class="ax_default label_14px__red u3738"#}
+{#                         style="width: 14px; height: 30px; left: 548px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3738-2_div" class="u3738_div"#}
+{#                             style="width: 14px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3738-2_text" class="text u3738_text" style="visibility: inherit">#}
+{#                            <p><span>￥</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Number (Rectangle) -->#}
+{#                <div id="u3739-2" class="ax_default label_14px__red u3739" data-label="Number"#}
+{#                     style="width: 32px; height: 30px; left: 734px; top: 45px;visibility: inherit">#}
+{#                    <div id="u3739-2_div" class="u3739_div" style="width: 32px; height: 30px;visibility: inherit"></div>#}
+{#                    <div id="u3739-2_text" class="text u3739_text" style="visibility: inherit">#}
+{#                        <p><span>数量</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Group) -->#}
+{#                <div id="u3740-2" class="ax_default u3740" style="visibility: inherit" data-left="903" data-top="45"#}
+{#                     data-width="45" data-height="30">#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3741-2" class="ax_default label_14px__red u3741"#}
+{#                         style="width: 14px; height: 30px; left: 903px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3741-2_div" class="u3741_div"#}
+{#                             style="width: 14px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3741-2_text" class="text u3741_text" style="visibility: inherit">#}
+{#                            <p><span>￥</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <!-- Total (Rectangle) -->#}
+{#                    <div id="u3742-2" class="ax_default label_14px__red u3742" data-label="Total"#}
+{#                         style="width: 28px; height: 30px; left: 920px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3742-2_div" class="u3742_div"#}
+{#                             style="width: 28px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3742-2_text" class="text u3742_text" style="visibility: inherit">#}
+{#                            <p><span>小计</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Group) -->#}
+{#                <div id="u3743-2" class="ax_default u3743" style="visibility: inherit" data-left="1086" data-top="45"#}
+{#                     data-width="45" data-height="30">#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3744-2" class="ax_default label_14px__red u3744"#}
+{#                         style="width: 14px; height: 30px; left: 1086px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3744-2_div" class="u3744_div"#}
+{#                             style="width: 14px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3744-2_text" class="text u3744_text" style="visibility: inherit">#}
+{#                            <p><span>￥</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3745-2" class="ax_default label_14px__red u3745"#}
+{#                         style="width: 28px; height: 30px; left: 1103px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3745-2_div" class="u3745_div"#}
+{#                             style="width: 28px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3745-2_text" class="text u3745_text" style="visibility: inherit">#}
+{#                            <p><span>实付</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div id="u3730-3" class="preeval" style="width: 1200px; height: 120px;">#}
+{##}
+{#                <!-- Unnamed (Rectangle) -->#}
+{#                <div id="u3731-3" class="ax_default box1__eee u3731"#}
+{#                     style="width: 1200px; height: 120px; left: 0px; top: 0px;visibility: inherit">#}
+{#                    <div id="u3731-3_div" class="u3731_div"#}
+{#                         style="width: 1200px; height: 120px;visibility: inherit"></div>#}
+{#                    <div id="u3731-3_text" class="text u3731_text" style="display:none; visibility: hidden">#}
+{#                        <p></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Rectangle) -->#}
+{#                <div id="u3732-3" class="ax_default box_2 u3732"#}
+{#                     style="width: 75px; height: 75px; left: 35px; top: 23px;visibility: inherit">#}
+{#                    <div id="u3732-3_div" class="u3732_div" style="width: 75px; height: 75px;visibility: inherit"></div>#}
+{#                    <div id="u3732-3_text" class="text u3732_text" style="display:none; visibility: hidden">#}
+{#                        <p></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Image) -->#}
+{#                <div id="u3733-3" class="ax_default _图片_ u3733"#}
+{#                     style="width: 45px; height: 36px; left: 50px; top: 43px;visibility: inherit">#}
+{#                    <img id="u3733-3_img" class="img u3733_img" src="{% static 'luogu/images/index/u38.png' %}"/>#}
+{#                    <div id="u3733-3_text" class="text u3733_text" style="display:none; visibility: hidden">#}
+{#                        <p></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Name (Rectangle) -->#}
+{#                <div id="u3734-3" class="ax_default label_14px__red u3734" data-label="Name"#}
+{#                     style="width: 260px; height: 30px; left: 130px; top: 24px;visibility: inherit">#}
+{#                    <div id="u3734-3_div" class="u3734_div"#}
+{#                         style="width: 260px; height: 30px;visibility: inherit"></div>#}
+{#                    <div id="u3734-3_text" class="text u3734_text" style="visibility: inherit">#}
+{#                        <p><span>轨道滚珠积木玩具亲子互动套装</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Rectangle) -->#}
+{#                <div id="u3735-3" class="ax_default label_14px__red u3735"#}
+{#                     style="width: 260px; height: 30px; left: 130px; top: 56px;visibility: inherit">#}
+{#                    <div id="u3735-3_div" class="u3735_div"#}
+{#                         style="width: 260px; height: 30px;visibility: inherit"></div>#}
+{#                    <div id="u3735-3_text" class="text u3735_text" style="visibility: inherit">#}
+{#                        <p><span>颜色：红色&nbsp;&nbsp; 尺码：S</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Group) -->#}
+{#                <div id="u3736-3" class="ax_default u3736" style="visibility: inherit" data-left="548" data-top="45"#}
+{#                     data-width="48" data-height="30">#}
+{##}
+{#                    <!-- Price (Rectangle) -->#}
+{#                    <div id="u3737-3" class="ax_default label_14px__red u3737" data-label="Price"#}
+{#                         style="width: 32px; height: 30px; left: 564px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3737-3_div" class="u3737_div"#}
+{#                             style="width: 32px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3737-3_text" class="text u3737_text" style="visibility: inherit">#}
+{#                            <p><span>单价</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3738-3" class="ax_default label_14px__red u3738"#}
+{#                         style="width: 14px; height: 30px; left: 548px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3738-3_div" class="u3738_div"#}
+{#                             style="width: 14px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3738-3_text" class="text u3738_text" style="visibility: inherit">#}
+{#                            <p><span>￥</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Number (Rectangle) -->#}
+{#                <div id="u3739-3" class="ax_default label_14px__red u3739" data-label="Number"#}
+{#                     style="width: 32px; height: 30px; left: 734px; top: 45px;visibility: inherit">#}
+{#                    <div id="u3739-3_div" class="u3739_div" style="width: 32px; height: 30px;visibility: inherit"></div>#}
+{#                    <div id="u3739-3_text" class="text u3739_text" style="visibility: inherit">#}
+{#                        <p><span>数量</span></p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Group) -->#}
+{#                <div id="u3740-3" class="ax_default u3740" style="visibility: inherit" data-left="903" data-top="45"#}
+{#                     data-width="45" data-height="30">#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3741-3" class="ax_default label_14px__red u3741"#}
+{#                         style="width: 14px; height: 30px; left: 903px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3741-3_div" class="u3741_div"#}
+{#                             style="width: 14px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3741-3_text" class="text u3741_text" style="visibility: inherit">#}
+{#                            <p><span>￥</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <!-- Total (Rectangle) -->#}
+{#                    <div id="u3742-3" class="ax_default label_14px__red u3742" data-label="Total"#}
+{#                         style="width: 28px; height: 30px; left: 920px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3742-3_div" class="u3742_div"#}
+{#                             style="width: 28px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3742-3_text" class="text u3742_text" style="visibility: inherit">#}
+{#                            <p><span>小计</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!-- Unnamed (Group) -->#}
+{#                <div id="u3743-3" class="ax_default u3743" style="visibility: inherit" data-left="1086" data-top="45"#}
+{#                     data-width="45" data-height="30">#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3744-3" class="ax_default label_14px__red u3744"#}
+{#                         style="width: 14px; height: 30px; left: 1086px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3744-3_div" class="u3744_div"#}
+{#                             style="width: 14px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3744-3_text" class="text u3744_text" style="visibility: inherit">#}
+{#                            <p><span>￥</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <!-- Unnamed (Rectangle) -->#}
+{#                    <div id="u3745-3" class="ax_default label_14px__red u3745"#}
+{#                         style="width: 28px; height: 30px; left: 1103px; top: 45px;visibility: inherit">#}
+{#                        <div id="u3745-3_div" class="u3745_div"#}
+{#                             style="width: 28px; height: 30px;visibility: inherit"></div>#}
+{#                        <div id="u3745-3_text" class="text u3745_text" style="visibility: inherit">#}
+{#                            <p><span>实付</span></p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+
+        <!-- Unnamed (Table) -->
+        <div id="u3746" class="ax_default">
+
+            <!-- Unnamed (Table Cell) -->
+            <div id="u3747" class="ax_default table_cell">
+                <img id="u3747_img" class="img " src="{% static 'luogu/images/订单详情/u3747.png' %}"/>
+                <div id="u3747_text" class="text ">
+                    <p><span>商品信息</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Table Cell) -->
+            <div id="u3748" class="ax_default table_cell">
+                <img id="u3748_img" class="img " src="{% static 'luogu/images/订单详情/u3748.png' %}"/>
+                <div id="u3748_text" class="text ">
+                    <p><span>单价</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Table Cell) -->
+            <div id="u3749" class="ax_default table_cell">
+                <img id="u3749_img" class="img " src="{% static 'luogu/images/订单详情/u3748.png' %}"/>
+                <div id="u3749_text" class="text ">
+                    <p><span>数量</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Table Cell) -->
+            <div id="u3750" class="ax_default table_cell">
+                <img id="u3750_img" class="img " src="{% static 'luogu/images/订单详情/u3748.png' %}"/>
+                <div id="u3750_text" class="text ">
+                    <p><span>小计</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Table Cell) -->
+            <div id="u3751" class="ax_default table_cell">
+                <img id="u3751_img" class="img " src="{% static 'luogu/images/订单详情/u3748.png' %}"/>
+                <div id="u3751_text" class="text ">
+                    <p><span>实付</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3752" style="top: {{ heights.height1 }}px" class="ax_default label_14px__red">
+            <div id="u3752_div" class=""></div>
+            <div id="u3752_text" class="text ">
+                <p><span>商品总额：</span></p>
+                <p><span>活动优惠：</span></p>
+                <p><span>运费：</span></p>
+            </div>
+        </div>
+
+        <!-- Total amount (Rectangle) -->
+        <div id="u3753" style="top: {{ heights.height1 }}px" class="ax_default label_14px__red" data-label="Total amount">
+            <div id="u3753_div" class=""></div>
+            <div id="u3753_text" class="text ">
+                <p style="font-size:16px;"><span style="font-size:14px;">￥</span><span>{{ details.total_amount|stringformat:".2f" }}</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3754" style="top: {{ heights.height2 }}px" class="ax_default label_14px__red">
+            <div id="u3754_div" class=""></div>
+            <div id="u3754_text" class="text ">
+                <p style="font-size:16px;"><span style="font-size:14px;">￥</span><span>0.00</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3755" style="top: {{ heights.height3 }}px" class="ax_default label_14px__red">
+            <div id="u3755_div" class=""></div>
+            <div id="u3755_text" class="text ">
+                <p style="font-size:16px;"><span style="font-size:14px;">￥</span><span>{{ details.shipping|stringformat:".2f" }}</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3756" style="top: {{ heights.height4 }}px" class="ax_default label_14px__red">
+            <div id="u3756_div" class=""></div>
+            <div id="u3756_text" class="text ">
+                <p><span>应付总额：</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3757" style="top: {{ heights.height4 }}px" class="ax_default label_14px__red">
+            <div id="u3757_div" class=""></div>
+            <div id="u3757_text" class="text ">
+                <p style="font-size:22px;"><span style="font-size:18px;">￥</span><span>{{ details.real_payment|stringformat:".2f" }}</span></p>
+            </div>
+        </div>
+        <div id="u3729" style="display:none; visibility:hidden;"></div>
+
+        <!-- Unnamed (基本信息) -->
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3759" class="ax_default box_2">
+            <div id="u3759_div" class=""></div>
+            <div id="u3759_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3760" class="ax_default label_14px__red">
+            <div id="u3760_div" class=""></div>
+            <div id="u3760_text" class="text ">
+                <p><span>收货人信息</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3761" class="ax_default label_14px__red">
+            <div id="u3761_div" class=""></div>
+            <div id="u3761_text" class="text ">
+                <p><span>付款信息</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3762" class="ax_default label_14px__red">
+            <div id="u3762_div" class=""></div>
+            <div id="u3762_text" class="text ">
+                <p><span>发票信息</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3763" class="ax_default label_14px__red">
+            <div id="u3763_div" class=""></div>
+            <div id="u3763_text" class="text ">
+                <p><span>收货人：</span></p>
+                <p><span>地址：</span></p>
+                <p><span>手机号：</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3764" class="ax_default label_14px__red">
+            <div id="u3764_div" class=""></div>
+            <div id="u3764_text" class="text ">
+                <p><span>{{ details.name }}</span></p>
+                <p><span>{{ details.address }}</span></p>
+                <p><span>{{ details.telephone }}</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3765" class="ax_default label_14px__red">
+            <div id="u3765_div" class=""></div>
+            <div id="u3765_text" class="text ">
+                <p><span>付款方式：</span></p>
+                <p><span>商品总额：</span></p>
+                <p><span>应支付金额：</span></p>
+                <p><span>运费金额：</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3766" class="ax_default label_14px__red">
+            <div id="u3766_div" class=""></div>
+            <div id="u3766_text" class="text ">
+                <p><span>{{ details.payment_method }}</span></p>
+                <p><span><br></span></p>
+                <p><span><br></span></p>
+                <p><span>￥{{ details.shipping|stringformat:".2f" }}</span></p>
+            </div>
+        </div>
+
+        <!-- Price (Rectangle) -->
+        <div id="u3767" class="ax_default label_14px__red" data-label="Price">
+            <div id="u3767_div" class=""></div>
+            <div id="u3767_text" class="text ">
+                <p><span>￥{{ details.total_amount|stringformat:".2f" }}</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3768" class="ax_default label_14px__red">
+            <div id="u3768_div" class=""></div>
+            <div id="u3768_text" class="text ">
+                <p><span>￥{{ details.real_payment|stringformat:".2f" }}</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3769" class="ax_default label_14px__red">
+            <div id="u3769_div" class=""></div>
+            <div id="u3769_text" class="text ">
+                <p><span>发票类型：</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3770" class="ax_default label_14px__red">
+            <div id="u3770_div" class=""></div>
+            <div id="u3770_text" class="text ">
+                <p><span>不开发票</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Vertical Line) -->
+        <div id="u3771" class="ax_default line">
+            <img id="u3771_img" class="img " src="{% static 'luogu/images/订单详情/u3771.svg' %}"/>
+            <div id="u3771_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Vertical Line) -->
+        <div id="u3772" class="ax_default line">
+            <img id="u3772_img" class="img " src="{% static 'luogu/images/订单详情/u3771.svg' %}"/>
+            <div id="u3772_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+        <div id="u3758" style="display:none; visibility:hidden;"></div>
+
+        <!-- Unnamed (Dynamic Panel) -->
+        <div id="u3773" class="ax_default">
+            <div id="u3773_state0" class="panel_state" data-label="State1" style="">
+                <div id="u3773_state0_content" class="panel_state_content">
+
+                    <!-- Rpt_Logistics (Repeater) -->
+                    <div id="u3774" class="ax_default" data-label="Rpt_Logistics">
+                        <script id="u3774_script" type="axure-repeater-template" data-label="Rpt_Logistics">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775" class="ax_default ax_default_hidden u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775_state0" class="panel_state u3775_state0" data-label="State1" style="">
+                                    <div id="u3775_state0_content" class="panel_state_content u3775_state0_content">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics">
+                                            <img id="u3776_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics">
+                                            <div id="u3777_div" class="u3777_div"></div>
+                                            <div id="u3777_text" class="text u3777_text">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778" class="ax_default line u3778" data-label="Line_Logistics">
+                                            <img id="u3778_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics">
+                                            <div id="u3779_div" class="u3779_div"></div>
+                                            <div id="u3779_text" class="text u3779_text">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics">
+                                            <div id="u3780_div" class="u3780_div"></div>
+                                            <div id="u3780_text" class="text u3780_text">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                        <div id="u3774-1" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-1" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-1_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-1_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-1" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-1_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-1_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-1" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-1_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-1_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-1" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-1_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-1_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-1" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-1_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-1_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-1" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-1_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-1_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-2" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-2" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-2_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-2_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-2" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-2_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-2_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-2" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-2_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-2_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-2" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-2_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-2_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-2" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-2_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-2_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-2" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-2_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-2_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-3" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-3" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-3_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-3_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-3" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-3_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-3_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-3" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-3_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-3_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-3" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-3_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-3_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-3" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-3_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-3_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-3" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-3_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-3_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-4" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-4" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-4_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-4_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-4" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-4_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-4_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-4" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-4_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-4_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-4" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-4_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-4_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-4" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-4_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-4_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-4" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-4_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-4_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-5" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-5" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-5_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-5_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-5" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-5_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-5_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-5" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-5_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-5_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-5" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-5_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-5_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-5" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-5_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-5_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-5" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-5_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-5_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-6" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-6" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-6_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-6_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-6" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-6_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-6_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-6" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-6_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-6_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-6" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-6_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-6_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-6" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-6_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-6_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-6" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-6_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-6_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-7" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-7" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-7_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-7_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-7" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-7_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-7_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-7" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-7_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-7_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-7" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-7_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-7_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-7" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-7_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-7_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-7" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-7_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-7_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-8" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-8" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-8_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-8_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-8" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-8_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-8_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-8" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-8_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-8_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-8" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-8_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-8_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-8" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-8_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-8_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-8" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-8_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-8_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3774-9" class="" style="width: 0px; height: 0px;">
+
+                            <!-- Dt_Losgistics (Dynamic Panel) -->
+                            <div id="u3775-9" class="ax_default u3775" data-label="Dt_Losgistics"
+                                 style="display:none; visibility: hidden">
+                                <div id="u3775-9_state0" class="panel_state u3775_state0" data-label="State1"
+                                     style=" width: 822px; height: 38px;visibility: inherit">
+                                    <div id="u3775-9_state0_content" class="panel_state_content u3775_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Circular_Logistics (Ellipse) -->
+                                        <div id="u3776-9" class="ax_default ellipse u3776"
+                                             data-label="Circular_Logistics"
+                                             style="width: 7px; height: 7px; left: 0px; top: 23px;visibility: inherit">
+                                            <img id="u3776-9_img" class="img u3776_img"
+                                                 src="{% static 'luogu/images/订单管理/circular_logistics_u2991.svg' %}"/>
+                                            <div id="u3776-9_text" class="text u3776_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Name_Logistics (Rectangle) -->
+                                        <div id="u3777-9" class="ax_default label_14px__red u3777"
+                                             data-label="Name_Logistics"
+                                             style="width: 620px; height: 21px; left: 202px; top: 17px;visibility: inherit">
+                                            <div id="u3777-9_div" class="u3777_div"
+                                                 style="width: 620px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3777-9_text" class="text u3777_text" style="visibility: inherit">
+                                                <p><span>物流信息</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Line_Logistics (Vertical Line) -->
+                                        <div id="u3778-9" class="ax_default line u3778" data-label="Line_Logistics"
+                                             style="width: 1px; height: 18px; left: 3px; top: 0px;visibility: inherit">
+                                            <img id="u3778-9_img" class="img u3778_img"
+                                                 src="{% static 'luogu/images/订单详情/line_logistics_u3778.svg' %}"/>
+                                            <div id="u3778-9_text" class="text u3778_text"
+                                                 style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Date_Logistics (Rectangle) -->
+                                        <div id="u3779-9" class="ax_default label_14px__red u3779"
+                                             data-label="Date_Logistics"
+                                             style="width: 95px; height: 21px; left: 20px; top: 17px;visibility: inherit">
+                                            <div id="u3779-9_div" class="u3779_div"
+                                                 style="width: 95px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3779-9_text" class="text u3779_text" style="visibility: inherit">
+                                                <p><span>年-月-日</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Timime_Logistics (Rectangle) -->
+                                        <div id="u3780-9" class="ax_default label_14px__red u3780"
+                                             data-label="Timime_Logistics"
+                                             style="width: 56px; height: 21px; left: 118px; top: 17px;visibility: inherit">
+                                            <div id="u3780-9_div" class="u3780_div"
+                                                 style="width: 56px; height: 21px;visibility: inherit"></div>
+                                            <div id="u3780-9_text" class="text u3780_text" style="visibility: inherit">
+                                                <p><span>时:分:秒</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3781" class="ax_default box_2">
+            <div id="u3781_div" class=""></div>
+            <div id="u3781_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Rectangle) -->
+        <div id="u3782" class="ax_default box_2">
+            <div id="u3782_div" class=""></div>
+            <div id="u3782_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Rpt_Step (Repeater) -->
+        <div id="u3783" class="ax_default" data-label="Rpt_Step">
+            <script id="u3783_script" type="axure-repeater-template" data-label="Rpt_Step">
+
+                <!-- Dt_Rpt_Step (Dynamic Panel) -->
+                <div id="u3784" class="ax_default u3784" data-label="Dt_Rpt_Step">
+                    <div id="u3784_state0" class="panel_state u3784_state0" data-label="State1" style="">
+                        <div id="u3784_state0_content" class="panel_state_content u3784_state0_content">
+
+                            <!-- Name_Step (Rectangle) -->
+                            <div id="u3785" class="ax_default label_14px__red u3785" data-label="Name_Step">
+                                <div id="u3785_div" class="u3785_div"></div>
+                                <div id="u3785_text" class="text u3785_text">
+                                    <p><span>步骤名称</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Left_Line_Step (Line) -->
+                            <div id="u3786" class="ax_default line u3786" data-label="Left_Line_Step">
+                                <img id="u3786_img" class="img u3786_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3786_text" class="text u3786_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Right_Line_Step (Line) -->
+                            <div id="u3787" class="ax_default line u3787" data-label="Right_Line_Step">
+                                <img id="u3787_img" class="img u3787_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3787_text" class="text u3787_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Step (Image) -->
+                            <div id="u3788" class="ax_default _图片_ u3788" data-label="Icon_Step">
+                                <img id="u3788_img" class="img u3788_img" src="{% static 'luogu/images/订单详情/icon_step_u3788.svg' %}"/>
+                                <div id="u3788_text" class="text u3788_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </script>
+            <div id="u3783-1" class="" style="width: 168px; height: 62px;">
+
+                <!-- Dt_Rpt_Step (Dynamic Panel) -->
+                <div id="u3784-1" class="ax_default u3784" data-label="Dt_Rpt_Step" style="visibility: inherit">
+                    <div id="u3784-1_state0" class="panel_state u3784_state0" data-label="State1"
+                         style=" width: 168px; height: 62px;visibility: inherit">
+                        <div id="u3784-1_state0_content" class="panel_state_content u3784_state0_content"
+                             style="visibility: inherit">
+
+                            <!-- Name_Step (Rectangle) -->
+                            <div id="u3785-1" class="ax_default label_14px__red u3785" data-label="Name_Step"
+                                 style="width: 150px; height: 30px; left: 9px; top: 32px;visibility: inherit">
+                                <div id="u3785-1_div" class="u3785_div"
+                                     style="width: 150px; height: 30px;visibility: inherit"></div>
+                                <div id="u3785-1_text" class="text u3785_text" style="visibility: inherit">
+                                    <p><span>提交订单</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Left_Line_Step (Line) -->
+                            <div id="u3786-1" class="ax_default line u3786" data-label="Left_Line_Step"
+                                 style="width: 66px; height: 1px; left: 0px; top: 13px;visibility: inherit">
+                                <img id="u3786-1_img" class="img u3786_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3786-1_text" class="text u3786_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Right_Line_Step (Line) -->
+                            <div id="u3787-1" class="ax_default line u3787" data-label="Right_Line_Step"
+                                 style="width: 66px; height: 1px; left: 102px; top: 13px;visibility: inherit">
+                                <img id="u3787-1_img" class="img u3787_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3787-1_text" class="text u3787_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Step (Image) -->
+                            <div id="u3788-1" class="ax_default _图片_ u3788" data-label="Icon_Step"
+                                 style="width: 26px; height: 26px; left: 71px; top: 0px;visibility: inherit">
+                                <img id="u3788-1_img" class="img u3788_img" src="{% static 'luogu/images/订单详情/p23.png' %}"/>
+                                <div id="u3788-1_text" class="text u3788_text" style="display:none; visibility: hidden">
+                                    <p>提交订单</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="u3783-2" class="" style="width: 168px; height: 62px;">
+
+                <!-- Dt_Rpt_Step (Dynamic Panel) -->
+                <div id="u3784-2" class="ax_default u3784" data-label="Dt_Rpt_Step" style="visibility: inherit">
+                    <div id="u3784-2_state0" class="panel_state u3784_state0" data-label="State1"
+                         style=" width: 168px; height: 62px;visibility: inherit">
+                        <div id="u3784-2_state0_content" class="panel_state_content u3784_state0_content"
+                             style="visibility: inherit">
+
+                            <!-- Name_Step (Rectangle) -->
+                            <div id="u3785-2" class="ax_default label_14px__red u3785" data-label="Name_Step"
+                                 style="width: 150px; height: 30px; left: 9px; top: 32px;visibility: inherit">
+                                <div id="u3785-2_div" class="u3785_div"
+                                     style="width: 150px; height: 30px;visibility: inherit"></div>
+                                <div id="u3785-2_text" class="text u3785_text" style="visibility: inherit">
+                                    <p><span>付款成功</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Left_Line_Step (Line) -->
+                            <div id="u3786-2" class="ax_default line u3786" data-label="Left_Line_Step"
+                                 style="width: 66px; height: 1px; left: 0px; top: 13px;visibility: inherit">
+                                <img id="u3786-2_img" class="img u3786_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3786-2_text" class="text u3786_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Right_Line_Step (Line) -->
+                            <div id="u3787-2" class="ax_default line u3787" data-label="Right_Line_Step"
+                                 style="width: 66px; height: 1px; left: 102px; top: 13px;visibility: inherit">
+                                <img id="u3787-2_img" class="img u3787_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3787-2_text" class="text u3787_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Step (Image) -->
+                            <div id="u3788-2" class="ax_default _图片_ u3788" data-label="Icon_Step"
+                                 style="width: 26px; height: 26px; left: 71px; top: 0px;visibility: inherit">
+                                <img id="u3788-2_img" class="img u3788_img" src="{% static 'luogu/images/订单详情/p25.png' %}"/>
+                                <div id="u3788-2_text" class="text u3788_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="u3783-3" class="" style="width: 168px; height: 62px;">
+
+                <!-- Dt_Rpt_Step (Dynamic Panel) -->
+                <div id="u3784-3" class="ax_default u3784" data-label="Dt_Rpt_Step" style="visibility: inherit">
+                    <div id="u3784-3_state0" class="panel_state u3784_state0" data-label="State1"
+                         style=" width: 168px; height: 62px;visibility: inherit">
+                        <div id="u3784-3_state0_content" class="panel_state_content u3784_state0_content"
+                             style="visibility: inherit">
+
+                            <!-- Name_Step (Rectangle) -->
+                            <div id="u3785-3" class="ax_default label_14px__red u3785" data-label="Name_Step"
+                                 style="width: 150px; height: 30px; left: 9px; top: 32px;visibility: inherit">
+                                <div id="u3785-3_div" class="u3785_div"
+                                     style="width: 150px; height: 30px;visibility: inherit"></div>
+                                <div id="u3785-3_text" class="text u3785_text" style="visibility: inherit">
+                                    <p><span>商品出库</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Left_Line_Step (Line) -->
+                            <div id="u3786-3" class="ax_default line u3786" data-label="Left_Line_Step"
+                                 style="width: 66px; height: 1px; left: 0px; top: 13px;visibility: inherit">
+                                <img id="u3786-3_img" class="img u3786_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3786-3_text" class="text u3786_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Right_Line_Step (Line) -->
+                            <div id="u3787-3" class="ax_default line u3787" data-label="Right_Line_Step"
+                                 style="width: 66px; height: 1px; left: 102px; top: 13px;visibility: inherit">
+                                <img id="u3787-3_img" class="img u3787_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3787-3_text" class="text u3787_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Step (Image) -->
+                            <div id="u3788-3" class="ax_default _图片_ u3788" data-label="Icon_Step"
+                                 style="width: 26px; height: 26px; left: 71px; top: 0px;visibility: inherit">
+                                <img id="u3788-3_img" class="img u3788_img" src="{% static 'luogu/images/订单详情/p26.png' %}"/>
+                                <div id="u3788-3_text" class="text u3788_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="u3783-4" class="" style="width: 168px; height: 62px;">
+
+                <!-- Dt_Rpt_Step (Dynamic Panel) -->
+                <div id="u3784-4" class="ax_default u3784" data-label="Dt_Rpt_Step" style="visibility: inherit">
+                    <div id="u3784-4_state0" class="panel_state u3784_state0" data-label="State1"
+                         style=" width: 168px; height: 62px;visibility: inherit">
+                        <div id="u3784-4_state0_content" class="panel_state_content u3784_state0_content"
+                             style="visibility: inherit">
+
+                            <!-- Name_Step (Rectangle) -->
+                            <div id="u3785-4" class="ax_default label_14px__red u3785" data-label="Name_Step"
+                                 style="width: 150px; height: 30px; left: 9px; top: 32px;visibility: inherit">
+                                <div id="u3785-4_div" class="u3785_div"
+                                     style="width: 150px; height: 30px;visibility: inherit"></div>
+                                <div id="u3785-4_text" class="text u3785_text" style="visibility: inherit">
+                                    <p><span>等待收货</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Left_Line_Step (Line) -->
+                            <div id="u3786-4" class="ax_default line u3786" data-label="Left_Line_Step"
+                                 style="width: 66px; height: 1px; left: 0px; top: 13px;visibility: inherit">
+                                <img id="u3786-4_img" class="img u3786_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3786-4_text" class="text u3786_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Right_Line_Step (Line) -->
+                            <div id="u3787-4" class="ax_default line u3787" data-label="Right_Line_Step"
+                                 style="width: 66px; height: 1px; left: 102px; top: 13px;visibility: inherit">
+                                <img id="u3787-4_img" class="img u3787_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3787-4_text" class="text u3787_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Step (Image) -->
+                            <div id="u3788-4" class="ax_default _图片_ u3788" data-label="Icon_Step"
+                                 style="width: 26px; height: 26px; left: 71px; top: 0px;visibility: inherit">
+                                <img id="u3788-4_img" class="img u3788_img" src="{% static 'luogu/images/订单详情/p28.png' %}"/>
+                                <div id="u3788-4_text" class="text u3788_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="u3783-5" class="" style="width: 168px; height: 62px;">
+
+                <!-- Dt_Rpt_Step (Dynamic Panel) -->
+                <div id="u3784-5" class="ax_default u3784" data-label="Dt_Rpt_Step" style="visibility: inherit">
+                    <div id="u3784-5_state0" class="panel_state u3784_state0" data-label="State1"
+                         style=" width: 168px; height: 62px;visibility: inherit">
+                        <div id="u3784-5_state0_content" class="panel_state_content u3784_state0_content"
+                             style="visibility: inherit">
+
+                            <!-- Name_Step (Rectangle) -->
+                            <div id="u3785-5" class="ax_default label_14px__red u3785" data-label="Name_Step"
+                                 style="width: 150px; height: 30px; left: 9px; top: 32px;visibility: inherit">
+                                <div id="u3785-5_div" class="u3785_div"
+                                     style="width: 150px; height: 30px;visibility: inherit"></div>
+                                <div id="u3785-5_text" class="text u3785_text" style="visibility: inherit">
+                                    <p><span>完成</span></p>
+                                </div>
+                            </div>
+
+                            <!-- Left_Line_Step (Line) -->
+                            <div id="u3786-5" class="ax_default line u3786" data-label="Left_Line_Step"
+                                 style="width: 66px; height: 1px; left: 0px; top: 13px;visibility: inherit">
+                                <img id="u3786-5_img" class="img u3786_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3786-5_text" class="text u3786_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Right_Line_Step (Line) -->
+                            <div id="u3787-5" class="ax_default line u3787" data-label="Right_Line_Step"
+                                 style="width: 66px; height: 1px; left: 102px; top: 13px;visibility: inherit">
+                                <img id="u3787-5_img" class="img u3787_img" src="{% static 'luogu/images/订单详情/left_line_step_u3786.svg' %}"/>
+                                <div id="u3787-5_text" class="text u3787_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <!-- Icon_Step (Image) -->
+                            <div id="u3788-5" class="ax_default _图片_ u3788" data-label="Icon_Step"
+                                 style="width: 26px; height: 26px; left: 71px; top: 0px;visibility: inherit">
+                                <img id="u3788-5_img" class="img u3788_img" src="{% static 'luogu/images/订单详情/p30.png' %}"/>
+                                <div id="u3788-5_text" class="text u3788_text" style="display:none; visibility: hidden">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- State (Rectangle) -->
+        <div id="u3789" class="ax_default label_14px__red" data-label="State">
+            <div id="u3789_div" class=""></div>
+            <div id="u3789_text" class="text ">
+                <p><span>{{ details.payment_status }}</span></p>
+            </div>
+        </div>
+
+        <!-- Number (Rectangle) -->
+        <div id="u3790" style="display: none"></div>
+        <div id="order_id" class="ax_default label_14px__red" data-label="Number">
+            <div id="order_id_div" class=""></div>
+            <div id="order_id_text" class="text ">
+                <p><span>订单编号: {{ details.order_id|stringformat:"08d" }}</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Vertical Line) -->
+        <div id="u3791" class="ax_default line">
+            <img id="u3791_img" class="img " src="{% static 'luogu/images/订单详情/u3728.svg' %}"/>
+            <div id="u3791_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (Dynamic Panel) -->
+    {% if pay_button %}
+        <a href="/第三方支付.html/{{ details.order_id }}">
+        <div id="u3792" class="ax_default" style="cursor: pointer">
+            <div id="u3792_state0" class="panel_state" data-label="立即付款" style="">
+                <div id="u3792_state0_content" class="panel_state_content">
+
+                    <!-- Time (Dynamic Panel) -->
+                    <div id="u3793" class="ax_default" data-label="Time">
+                        <div id="u3793_state0" class="panel_state" data-label="State1" style="">
+                            <div id="u3793_state0_content" class="panel_state_content">
+
+                                <!-- Btn_Time (Rectangle) -->
+                                <div id="u3794" class="ax_default box1__eee" data-label="Btn_Time">
+                                    <div id="u3794_div" class=""></div>
+                                    <div id="u3794_text" class="text ">
+                                        <p><span>付款</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Minute (Rectangle) -->
+                                <div id="u3795" class="ax_default label_14px__red" data-label="Minute">
+                                    <div id="u3795_div" class=""></div>
+                                    <div id="u3795_text" class="text " style="display:none; visibility: hidden">
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <!-- Second (Rectangle) -->
+                                <div id="u3796" class="ax_default label_14px__red" data-label="Second">
+                                    <div id="u3796_div" class=""></div>
+                                    <div id="u3796_text" class="text ">
+                                        <p><span>59</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Unnamed (Rectangle) -->
+                                <div id="u3797" class="ax_default label_14px__red">
+                                    <div id="u3797_div" class=""></div>
+                                    <div id="u3797_text" class="text ">
+                                        <p><span>:</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="u3792_state1" class="panel_state" data-label="确认收货" style="visibility: hidden;">
+                <div id="u3792_state1_content" class="panel_state_content">
+
+                    <!-- Button (Rectangle) -->
+                    <div id="u3798" class="ax_default _形状" data-label="Button">
+                        <img id="u3798_img" class="img " src="{% static 'luogu/images/订单详情/button_u3798.svg' %}"/>
+                        <div id="u3798_text" class="text ">
+                            <p><span>确认收货</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    {% endif %}
+        <!-- Unnamed (网站底部) -->
+
+        <!-- Unnamed (Dynamic Panel) -->
+        <div id="u3800" style="top: {{ down_down_height }}px;" class="ax_default">
+            <div id="u3800_state0" class="panel_state" data-label="State1" style="">
+                <div id="u3800_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (Group) -->
+                    <div id="u3801" class="ax_default" data-left="75" data-top="50" data-width="200" data-height="152">
+
+                        <!-- Unnamed (Rectangle) -->
+                        <div id="u3802" class="ax_default label_14px__red">
+                            <div id="u3802_div" class=""></div>
+                            <div id="u3802_text" class="text ">
+                                <p><span>客户服务</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Unnamed (Group) -->
+                        <div id="u3803" class="ax_default" data-left="75" data-top="102" data-width="200"
+                             data-height="100">
+
+                            <!-- Unnamed (Dynamic Panel) -->
+                            <div id="u3804" class="ax_default">
+                                <div id="u3804_state0" class="panel_state" data-label="State1" style="">
+                                    <div id="u3804_state0_content" class="panel_state_content">
+
+                                        <!-- Unnamed (Rectangle) -->
+                                        <div id="u3805" class="ax_default box1__eee">
+                                            <div id="u3805_div" class=""></div>
+                                            <div id="u3805_text" class="text " style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Unnamed (Rectangle) -->
+                                        <div id="u3806" class="ax_default label_14px__red">
+                                            <div id="u3806_div" class=""></div>
+                                            <div id="u3806_text" class="text ">
+                                                <p><span>在线客服</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Unnamed (Image) -->
+                                        <div id="u3807" class="ax_default _图片_">
+                                            <img id="u3807_img" class="img " src="{% static 'luogu/images/index/u609.png' %}"/>
+                                            <div id="u3807_text" class="text " style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Unnamed (Dynamic Panel) -->
+                            <div id="u3808" class="ax_default">
+                                <div id="u3808_state0" class="panel_state" data-label="State1" style="">
+                                    <div id="u3808_state0_content" class="panel_state_content">
+
+                                        <!-- Unnamed (Rectangle) -->
+                                        <div id="u3809" class="ax_default box1__eee">
+                                            <div id="u3809_div" class=""></div>
+                                            <div id="u3809_text" class="text " style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Unnamed (Rectangle) -->
+                                        <div id="u3810" class="ax_default label_14px__red">
+                                            <div id="u3810_div" class=""></div>
+                                            <div id="u3810_text" class="text ">
+                                                <p><span>用户反馈</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Unnamed (Image) -->
+                                        <div id="u3811" class="ax_default _图片_">
+                                            <img id="u3811_img" class="img " src="{% static 'luogu/images/index/u613.png' %}"/>
+                                            <div id="u3811_text" class="text " style="display:none; visibility: hidden">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3812" class="ax_default label_14px__red">
+                        <div id="u3812_div" class=""></div>
+                        <div id="u3812_text" class="text ">
+                            <p><span>产品原型公众号</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3813" class="ax_default label_14px__red">
+                        <div id="u3813_div" class=""></div>
+                        <div id="u3813_text" class="text ">
+                            <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">扫描二维码</span>
+                            </p>
+                            <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;">关注卖冰酒小组</span>
+                            </p>
+                            <p><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;"><br></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Image) -->
+                    <div id="u3814" class="ax_default _图片_">
+                        <img id="u3814_img" class="img " src="{% static 'luogu/images/index/u616.png' %}"/>
+                        <div id="u3814_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unnamed (Dynamic Panel) -->
+        <div id="u3815" class="ax_default">
+            <div id="u3815_state0" class="panel_state" data-label="State1" style="">
+                <div id="u3815_state0_content" class="panel_state_content">
+                </div>
+            </div>
+        </div>
+        <div id="u3799" style="display:none; visibility:hidden;"></div>
+
+        <!-- Unnamed (返回顶部) -->
+
+        <!-- Top (Rectangle) -->
+        <div id="u3817" class="ax_default box1__eee___ ax_default_hidden" data-label="Top"
+             style="display:none; visibility: hidden">
+            <div id="u3817_div" class=""></div>
+            <div id="u3817_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+            </div>
+        </div>
+        <div id="u3816" style="display:none; visibility:hidden;"></div>
+
+        <!-- Arrow_List_Crumbs (Rectangle) -->
+        <div id="u3818" class="ax_default label_14px__red" data-label="Arrow_List_Crumbs">
+            <div id="u3818_div" class=""></div>
+            <div id="u3818_text" class="text ">
+                <p><span>&gt;</span></p>
+            </div>
+        </div>
+
+        <!-- Name_List_Crumbs (Rectangle) -->
+        <div id="u3819" class="ax_default label_14px__red" data-label="Name_List_Crumbs">
+            <div id="u3819_div" class=""></div>
+            <div id="u3819_text" class="text ">
+                <p><span>首页</span></p>
+            </div>
+        </div>
+
+        <!-- Arrow_List_Crumbs (Rectangle) -->
+        <div id="u3820" class="ax_default label_14px__red" data-label="Arrow_List_Crumbs">
+            <div id="u3820_div" class=""></div>
+            <div id="u3820_text" class="text ">
+                <p><span>&gt;</span></p>
+            </div>
+        </div>
+
+        <!-- Name_List_Crumbs (Rectangle) -->
+        <div id="u3821" class="ax_default label_14px__red" data-label="Name_List_Crumbs">
+            <div id="u3821_div" class=""></div>
+            <div id="u3821_text" class="text ">
+                <p><span>会员中心</span></p>
+            </div>
+        </div>
+
+        <!-- Name_List_Crumbs (Rectangle) -->
+        <div id="u3822" class="ax_default label_14px__red" data-label="Name_List_Crumbs">
+            <div id="u3822_div" class=""></div>
+            <div id="u3822_text" class="text ">
+                <p><span>订单详情</span></p>
+            </div>
+        </div>
+
+        <!-- Name_List_Crumbs (Rectangle) -->
+        <div id="u3823" class="ax_default label_14px__red" data-label="Name_List_Crumbs">
+            <div id="u3823_div" class=""></div>
+            <div id="u3823_text" class="text ">
+                <p><span>订单管理</span></p>
+            </div>
+        </div>
+
+        <!-- Arrow_List_Crumbs (Rectangle) -->
+        <div id="u3824" class="ax_default label_14px__red" data-label="Arrow_List_Crumbs">
+            <div id="u3824_div" class=""></div>
+            <div id="u3824_text" class="text ">
+                <p><span>&gt;</span></p>
+            </div>
+        </div>
+
+        <!-- Number (Rectangle) -->
+        <div id="u3825" class="ax_default label_14px__red" data-label="Number">
+            <div id="u3825_div" class=""></div>
+            <div id="u3825_text" class="text ">
+                <p><span>取消订单</span></p>
+            </div>
+        </div>
+
+        <!-- Box (Dynamic Panel) -->
+        <div id="u3826" class="ax_default ax_default_hidden" data-label="Box" style="display:none; visibility: hidden">
+            <div id="u3826_state0" class="panel_state" data-label="State1" style="">
+                <div id="u3826_state0_content" class="panel_state_content">
+
+                    <!-- Background_Box (Rectangle) -->
+                    <div id="u3827" class="ax_default box_2" data-label="Background_Box">
+                        <div id="u3827_div" class=""></div>
+                        <div id="u3827_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Close_Box (Image) -->
+                    <div id="u3828" class="ax_default _图片_" data-label="Close_Box">
+                        <img id="u3828_img" class="img " src="{% static 'luogu/images/商品详情页/close_box_u1511.png' %}"/>
+                        <div id="u3828_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Group) -->
+                    <div id="u3829" class="ax_default" data-left="119" data-top="332" data-width="388" data-height="45">
+
+                        <!-- Ok_Box (Rectangle) -->
+                        <div id="u3830" class="ax_default box_2" data-label="Ok_Box">
+                            <div id="u3830_div" class=""></div>
+                            <div id="u3830_text" class="text ">
+                                <p><span>提交</span></p>
+                            </div>
+                        </div>
+
+                        <!-- NO_Box (Rectangle) -->
+                        <div id="u3831" class="ax_default box_2" data-label="NO_Box">
+                            <div id="u3831_div" class=""></div>
+                            <div id="u3831_text" class="text ">
+                                <p><span>再想想</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rpt_Cancel (Repeater) -->
+                    <div id="u3832" class="ax_default" data-label="Rpt_Cancel">
+                        <script id="u3832_script" type="axure-repeater-template" data-label="Rpt_Cancel">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833" class="ax_default u3833" data-label="List" selectiongroup="list_size">
+                                <div id="u3833_state0" class="panel_state u3833_state0" data-label="State1" style="">
+                                    <div id="u3833_state0_content" class="panel_state_content u3833_state0_content">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834" class="ax_default _文本段落 u3834" data-label="Name_List_Size">
+                                            <img id="u3834_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834_text" class="text u3834_text">
+                                                <p><span>取消订单的选项</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835" class="ax_default u3835" data-label="Select_List">
+                                            <div id="u3835_state0" class="panel_state u3835_state0" data-label="State1"
+                                                 style="">
+                                                <div id="u3835_state0_content"
+                                                     class="panel_state_content u3835_state0_content">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List">
+                                                        <img id="u3836_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List">
+                                                        <img id="u3837_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                        <div id="u3832-1" class="preeval" style="width: 255px; height: 45px;">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833-1" class="ax_default u3833" data-label="List" selectiongroup="list_size"
+                                 style="visibility: inherit">
+                                <div id="u3833-1_state0" class="panel_state u3833_state0" data-label="State1"
+                                     style=" width: 255px; height: 45px;visibility: inherit">
+                                    <div id="u3833-1_state0_content" class="panel_state_content u3833_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834-1" class="ax_default _文本段落 u3834" data-label="Name_List_Size"
+                                             style="width: 255px; height: 45px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u3834-1_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834-1_text" class="text u3834_text" style="visibility: inherit">
+                                                <p><span>订单不能按预计时间送达</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835-1" class="ax_default u3835" data-label="Select_List"
+                                             style="visibility: inherit">
+                                            <div id="u3835-1_state0" class="panel_state u3835_state0"
+                                                 data-label="State1"
+                                                 style=" width: 18px; height: 18px;visibility: inherit">
+                                                <div id="u3835-1_state0_content"
+                                                     class="panel_state_content u3835_state0_content"
+                                                     style="visibility: inherit">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836-1" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List"
+                                                         style="width: 18px; height: 18px; left: 0px; top: 0px;visibility: inherit">
+                                                        <img id="u3836-1_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836-1_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837-1" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List"
+                                                         style="width: 8px; height: 8px; left: 9px; top: 8px;visibility: inherit">
+                                                        <img id="u3837-1_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837-1_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3832-2" class="preeval" style="width: 255px; height: 45px;">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833-2" class="ax_default u3833" data-label="List" selectiongroup="list_size"
+                                 style="visibility: inherit">
+                                <div id="u3833-2_state0" class="panel_state u3833_state0" data-label="State1"
+                                     style=" width: 255px; height: 45px;visibility: inherit">
+                                    <div id="u3833-2_state0_content" class="panel_state_content u3833_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834-2" class="ax_default _文本段落 u3834" data-label="Name_List_Size"
+                                             style="width: 255px; height: 45px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u3834-2_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834-2_text" class="text u3834_text" style="visibility: inherit">
+                                                <p><span>操作有误（商品、地址等选错）</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835-2" class="ax_default u3835" data-label="Select_List"
+                                             style="visibility: inherit">
+                                            <div id="u3835-2_state0" class="panel_state u3835_state0"
+                                                 data-label="State1"
+                                                 style=" width: 18px; height: 18px;visibility: inherit">
+                                                <div id="u3835-2_state0_content"
+                                                     class="panel_state_content u3835_state0_content"
+                                                     style="visibility: inherit">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836-2" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List"
+                                                         style="width: 18px; height: 18px; left: 0px; top: 0px;visibility: inherit">
+                                                        <img id="u3836-2_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836-2_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837-2" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List"
+                                                         style="width: 8px; height: 8px; left: 9px; top: 8px;visibility: inherit">
+                                                        <img id="u3837-2_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837-2_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3832-3" class="preeval" style="width: 255px; height: 45px;">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833-3" class="ax_default u3833" data-label="List" selectiongroup="list_size"
+                                 style="visibility: inherit">
+                                <div id="u3833-3_state0" class="panel_state u3833_state0" data-label="State1"
+                                     style=" width: 255px; height: 45px;visibility: inherit">
+                                    <div id="u3833-3_state0_content" class="panel_state_content u3833_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834-3" class="ax_default _文本段落 u3834" data-label="Name_List_Size"
+                                             style="width: 255px; height: 45px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u3834-3_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834-3_text" class="text u3834_text" style="visibility: inherit">
+                                                <p><span>重复下单/误下单</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835-3" class="ax_default u3835" data-label="Select_List"
+                                             style="visibility: inherit">
+                                            <div id="u3835-3_state0" class="panel_state u3835_state0"
+                                                 data-label="State1"
+                                                 style=" width: 18px; height: 18px;visibility: inherit">
+                                                <div id="u3835-3_state0_content"
+                                                     class="panel_state_content u3835_state0_content"
+                                                     style="visibility: inherit">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836-3" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List"
+                                                         style="width: 18px; height: 18px; left: 0px; top: 0px;visibility: inherit">
+                                                        <img id="u3836-3_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836-3_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837-3" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List"
+                                                         style="width: 8px; height: 8px; left: 9px; top: 8px;visibility: inherit">
+                                                        <img id="u3837-3_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837-3_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3832-4" class="preeval" style="width: 255px; height: 45px;">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833-4" class="ax_default u3833" data-label="List" selectiongroup="list_size"
+                                 style="visibility: inherit">
+                                <div id="u3833-4_state0" class="panel_state u3833_state0" data-label="State1"
+                                     style=" width: 255px; height: 45px;visibility: inherit">
+                                    <div id="u3833-4_state0_content" class="panel_state_content u3833_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834-4" class="ax_default _文本段落 u3834" data-label="Name_List_Size"
+                                             style="width: 255px; height: 45px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u3834-4_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834-4_text" class="text u3834_text" style="visibility: inherit">
+                                                <p><span>其他渠道价格更低</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835-4" class="ax_default u3835" data-label="Select_List"
+                                             style="visibility: inherit">
+                                            <div id="u3835-4_state0" class="panel_state u3835_state0"
+                                                 data-label="State1"
+                                                 style=" width: 18px; height: 18px;visibility: inherit">
+                                                <div id="u3835-4_state0_content"
+                                                     class="panel_state_content u3835_state0_content"
+                                                     style="visibility: inherit">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836-4" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List"
+                                                         style="width: 18px; height: 18px; left: 0px; top: 0px;visibility: inherit">
+                                                        <img id="u3836-4_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836-4_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837-4" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List"
+                                                         style="width: 8px; height: 8px; left: 9px; top: 8px;visibility: inherit">
+                                                        <img id="u3837-4_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837-4_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3832-5" class="preeval" style="width: 255px; height: 45px;">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833-5" class="ax_default u3833" data-label="List" selectiongroup="list_size"
+                                 style="visibility: inherit">
+                                <div id="u3833-5_state0" class="panel_state u3833_state0" data-label="State1"
+                                     style=" width: 255px; height: 45px;visibility: inherit">
+                                    <div id="u3833-5_state0_content" class="panel_state_content u3833_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834-5" class="ax_default _文本段落 u3834" data-label="Name_List_Size"
+                                             style="width: 255px; height: 45px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u3834-5_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834-5_text" class="text u3834_text" style="visibility: inherit">
+                                                <p><span>该商品降价了</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835-5" class="ax_default u3835" data-label="Select_List"
+                                             style="visibility: inherit">
+                                            <div id="u3835-5_state0" class="panel_state u3835_state0"
+                                                 data-label="State1"
+                                                 style=" width: 18px; height: 18px;visibility: inherit">
+                                                <div id="u3835-5_state0_content"
+                                                     class="panel_state_content u3835_state0_content"
+                                                     style="visibility: inherit">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836-5" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List"
+                                                         style="width: 18px; height: 18px; left: 0px; top: 0px;visibility: inherit">
+                                                        <img id="u3836-5_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836-5_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837-5" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List"
+                                                         style="width: 8px; height: 8px; left: 9px; top: 8px;visibility: inherit">
+                                                        <img id="u3837-5_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837-5_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="u3832-6" class="preeval" style="width: 255px; height: 45px;">
+
+                            <!-- List (Dynamic Panel) -->
+                            <div id="u3833-6" class="ax_default u3833" data-label="List" selectiongroup="list_size"
+                                 style="visibility: inherit">
+                                <div id="u3833-6_state0" class="panel_state u3833_state0" data-label="State1"
+                                     style=" width: 255px; height: 45px;visibility: inherit">
+                                    <div id="u3833-6_state0_content" class="panel_state_content u3833_state0_content"
+                                         style="visibility: inherit">
+
+                                        <!-- Name_List_Size (Rectangle) -->
+                                        <div id="u3834-6" class="ax_default _文本段落 u3834" data-label="Name_List_Size"
+                                             style="width: 255px; height: 45px; left: 0px; top: 0px;visibility: inherit">
+                                            <img id="u3834-6_img" class="img u3834_img"
+                                                 src="{% static 'luogu/images/订单管理/name_list_size_u3511.svg' %}"/>
+                                            <div id="u3834-6_text" class="text u3834_text" style="visibility: inherit">
+                                                <p><span>不想买了</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Select_List (Dynamic Panel) -->
+                                        <div id="u3835-6" class="ax_default u3835" data-label="Select_List"
+                                             style="visibility: inherit">
+                                            <div id="u3835-6_state0" class="panel_state u3835_state0"
+                                                 data-label="State1"
+                                                 style=" width: 18px; height: 18px;visibility: inherit">
+                                                <div id="u3835-6_state0_content"
+                                                     class="panel_state_content u3835_state0_content"
+                                                     style="visibility: inherit">
+
+                                                    <!-- Triangle_Select_List (Shape) -->
+                                                    <div id="u3836-6" class="ax_default box1__eee u3836"
+                                                         data-label="Triangle_Select_List"
+                                                         style="width: 18px; height: 18px; left: 0px; top: 0px;visibility: inherit">
+                                                        <img id="u3836-6_img" class="img u3836_img"
+                                                             src="{% static 'luogu/images/商品详情页/triangle_select_list_u1452.svg' %}"/>
+                                                        <div id="u3836-6_text" class="text u3836_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Correct_Select_List (Image) -->
+                                                    <div id="u3837-6" class="ax_default _图片_ u3837"
+                                                         data-label="Correct_Select_List"
+                                                         style="width: 8px; height: 8px; left: 9px; top: 8px;visibility: inherit">
+                                                        <img id="u3837-6_img" class="img u3837_img"
+                                                             src="{% static 'luogu/images/商品详情页/correct_select_list_u1453.png' %}"/>
+                                                        <div id="u3837-6_text" class="text u3837_text"
+                                                             style="display:none; visibility: hidden">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3838" class="ax_default label_14px__red">
+                        <div id="u3838_div" class=""></div>
+                        <div id="u3838_text" class="text ">
+                            <p><span>选择取消订单原因</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3839" class="ax_default _文本段落">
+                        <div id="u3839_div" class=""></div>
+                        <div id="u3839_text" class="text ">
+                            <p><span>订单取消成功后将无法恢复；</span></p>
+                            <p><span>优惠券可能不再返还，支付优惠也将一并取消。</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unnamed (Group) -->
+        <div id="u3840" class="ax_default" data-left="40" data-top="470" data-width="159" data-height="115">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u3841" class="ax_default label_14px__red">
+                <div id="u3841_div" class=""></div>
+                <div id="u3841_text" class="text ">
+                    <p><span>送货方式：</span></p>
+                    <p><span>承运人：</span></p>
+                    <p><span>货运单号：</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u3842" class="ax_default label_14px__red">
+                <div id="u3842_div" class=""></div>
+                <div id="u3842_text" class="text ">
+                    <p><span>普通快递</span></p>
+                    <p><span>顺风快递</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u3843" class="ax_default label_14px__red">
+                <div id="u3843_div" class=""></div>
+                <div id="u3843_text" class="text ">
+                    <p><span>单号</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box2 (Dynamic Panel) -->
+        <div id="u3844" class="ax_default ax_default_hidden" data-label="Box2" style="display:none; visibility: hidden">
+            <div id="u3844_state0" class="panel_state" data-label="State1" style="">
+                <div id="u3844_state0_content" class="panel_state_content">
+
+                    <!-- Background_Box (Rectangle) -->
+                    <div id="u3845" class="ax_default box_2" data-label="Background_Box">
+                        <div id="u3845_div" class=""></div>
+                        <div id="u3845_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Close_Box (Image) -->
+                    <div id="u3846" class="ax_default _图片_" data-label="Close_Box">
+                        <img id="u3846_img" class="img " src="{% static 'luogu/images/商品详情页/close_box_u1511.png' %}"/>
+                        <div id="u3846_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Group) -->
+                    <div id="u3847" class="ax_default" data-left="68" data-top="180" data-width="315" data-height="40">
+
+                        <!-- Ok_Box (Rectangle) -->
+                        <div id="u3848" class="ax_default box_2" data-label="Ok_Box">
+                            <div id="u3848_div" class=""></div>
+                            <div id="u3848_text" class="text ">
+                                <p><span>确定</span></p>
+                            </div>
+                        </div>
+
+                        <!-- NO_Box (Rectangle) -->
+                        <div id="u3849" class="ax_default box_2" data-label="NO_Box">
+                            <div id="u3849_div" class=""></div>
+                            <div id="u3849_text" class="text ">
+                                <p><span>取消</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u3850" class="ax_default label_14px__red">
+                        <div id="u3850_div" class=""></div>
+                        <div id="u3850_text" class="text ">
+                            <p><span>确认已收到商品吗？</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'luogu/resources/scripts/axure/ios.js' %}"></script>
+    <script>
+        $('body').css("background-color", "rgba(246, 246, 246, 1)");
+    </script>
+    {#    </body>#}
+{% endblock %}
