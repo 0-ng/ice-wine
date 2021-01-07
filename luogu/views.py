@@ -155,6 +155,8 @@ def shopping_cart(request):
         # order.total_amount = total_amount
         # order.real_payment = total_amount
         order.save()
+        customer.consumption_amount += order.total_amount
+        customer.save()
         return JsonResponse({"result": True, "order_id": order.id})
         # return redirect("/订单结算.html/" + str(order.id))
     else:
@@ -384,7 +386,10 @@ def order_management(request):
     login = True
     username = None
     if login:
-        username = Customer.objects.get(user=request.user).user_name
+        try:
+            username = Customer.objects.get(user=request.user).user_name
+        except:
+            pass
     user = request.user
     print(user)
     customer = Customer.objects.get(user=user)
@@ -435,7 +440,7 @@ def user_login(request):
                 message = "密码不正确!"
         except:
             message = "用户不存在!"
-        return JsonResponse({"result": False, "message": message})
+        return JsonResponse({"result": False, "message": message},json_dumps_params={'ensure_ascii':False})
     else:
         return render(request, "用户登录.html")
 
@@ -485,6 +490,8 @@ def product_details(request, product_id):
             order_detail = Order_detail(order=order, commodity=commodity, quantity=num)
             print(order_detail.id)
             order_detail.save()
+            customer.consumption_amount += order.total_amount
+            customer.save()
             print(order_detail.id)
             return redirect("/订单结算.html/" + str(order.id))
             # return redirect("/")

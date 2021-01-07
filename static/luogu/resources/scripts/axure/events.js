@@ -597,7 +597,7 @@ $axure.internal(function ($ax) {
             if(["u20", "u9863", "u3067", "u1282", "u1473", "u1474",
             "u10507", "u10751", "u10953", "u3622", "u47", "u46", "u46_state0",
             "u47_div", "u47_text", "u28", "u28_state0", "u29", "u191", "u548", "u1193",
-            "u1548", "u240", "u13812"].find(function(value, index, arr) {
+            "u1548", "u240", "u13812", "u11015", "u239", "u549"].find(function(value, index, arr) {
                 return value == elementId;
                 }))return true;
             if(!$ax.style.IsWidgetDisabled(elementId)) return fn.apply(this, arguments);

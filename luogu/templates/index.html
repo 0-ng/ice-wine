@@ -369,13 +369,14 @@
         </div>
 
         <!-- 查看全部 (Rectangle) -->
+        <a href="/商品分类.html">
         <div id="u239" class="ax_default label_14px__red">
             <div id="u239_div" class=""></div>
             <div id="u239_text" class="text ">
                 <p><span>查看全部 &gt; </span></p>
             </div>
         </div>
-
+        </a>
         <!-- 第一件新品 (Dynamic Panel) -->
         {% for product in newProduct %}
             <a href="商品详情页.html/{{ product.commodity_id }}">
@@ -814,12 +815,12 @@
                                 </div>
 
                                 <!-- Unnamed (Image) -->
-                                <div id="u625" class="ax_default _图片_">
-                                    <img id="u625_img" class="img " src="/media/{{ product.img }}"/>
-                                    <div id="u625_text" class="text " style="display:none; visibility: hidden">
-                                        <p></p>
-                                    </div>
-                                </div>
+{#                                <div id="u625" class="ax_default _图片_">#}
+{#                                    <img id="u625_img" class="img " src="/media/{{ product.img }}"/>#}
+{#                                    <div id="u625_text" class="text " style="display:none; visibility: hidden">#}
+{#                                        <p></p>#}
+{#                                    </div>#}
+{#                                </div>#}
                                 <div id="u622" style="display:none; visibility:hidden;"></div>
 
                                 <!-- Name_Shop (Rectangle) -->

@@ -115,8 +115,10 @@ class Order(models.Model):  # 订单
     #     for detail in details:
     #         Commodity.objects.get(id=detail.commodity_id)
 
-    # def save(self, *args, **kwargs):
-    #     super(Order, self).save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        super(Order, self).save(*args, **kwargs)
+        # self.customer.consumption_amount += self.total_amount
+        # self.customer.save()
 
 
 class Order_detail(models.Model):  # 订单详情

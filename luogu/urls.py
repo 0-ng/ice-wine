@@ -24,7 +24,7 @@ urlpatterns = [
     path('index.html', luogu.index),
     path('购物车.html', luogu.shopping_cart),
     path('shopping_cart_change', luogu.shopping_cart_change),
-    path('个人中心.html', luogu.personal_center),
+    path('个人中心.html', luogu.order_management),
     path('订单结算.html/<int:order_id>', luogu.order_settlement),
     path('get_address/<int:id>', luogu.get_address),
     path('订单详情.html/<int:order_id>', luogu.order_details),
